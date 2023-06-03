@@ -43,7 +43,7 @@ button {
     margin-top: 10vh;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 780px) {
     body {
         font-size: 30px;
     }
