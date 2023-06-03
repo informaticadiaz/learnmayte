@@ -71,7 +71,7 @@ function mostrarResultados() {
     var resultadosElement = document.getElementById("resultados");
     var aciertos = obtenerAciertos();
     var errores = obtenerErrores();
-    resultadosElement.textContent = "Aciertos: " + aciertos + ", Errores: " + errores;
+    resultadosElement.textContent = "Aciertos: " + aciertos + " - Errores: " + errores;
 }
 
 function resetResultados() {
