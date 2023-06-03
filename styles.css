@@ -45,7 +45,7 @@ button {
 
 @media screen and (max-width: 580px) {
     body {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .container {
