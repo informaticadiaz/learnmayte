@@ -41,5 +41,14 @@ button {
 
 #resultados {
     margin-top: 10vh;
+}
 
+@media screen and (max-width: 580px) {
+    body {
+        font-size: 40px;
+    }
+
+    .container {
+        font-size: 72px;
+    }
 }
