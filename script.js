@@ -29,10 +29,10 @@ function verificarSuma() {
     // Comprobar si la respuesta es correcta
     var mensajeElement = document.getElementById("mensaje");
     if (sumaIngresada === sumaCorrecta) {
-        mensajeElement.textContent = "¡Correcto! Eres muy inteligente.";
+        mensajeElement.innerHTML = "¡Correcto!<br>Eres muy inteligente.";
         incrementarAciertos();
     } else {
-        mensajeElement.textContent = "Oops... La respuesta correcta es " + sumaCorrecta + ".";
+        mensajeElement.innerHTML = "Oops...<br>La respuesta correcta es " + sumaCorrecta + ".";
         incrementarErrores();
     }
 
@@ -71,7 +71,7 @@ function mostrarResultados() {
     var resultadosElement = document.getElementById("resultados");
     var aciertos = obtenerAciertos();
     var errores = obtenerErrores();
-    resultadosElement.textContent = "Aciertos: " + aciertos + " - Errores: " + errores;
+    resultadosElement.innerHTML = "Aciertos: " + aciertos + "<br> Errores: " + errores;
 }
 
 function resetResultados() {
