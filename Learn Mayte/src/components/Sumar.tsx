@@ -51,7 +51,6 @@ const Sumar = () => {
         const porcentajeAciertos = (aciertos / intentos) * 100;
         if (porcentajeAciertos > 70) {
             setMensaje("¡Prueba superada!");
-            reiniciarContadores();
         } else {
             setMensaje("Inténtalo de nuevo.");
         }
@@ -97,14 +96,38 @@ const Sumar = () => {
     }
 
     return (
-        <div>
-            <p id="numeros">{numeros}</p>
-            {inputVisible && <input type="text" id="respuesta" onKeyDown={handleKeyPress} />}
-            {inputVisible && <button onClick={() => verificarSuma(parseInt(document.getElementById("respuesta").value))}>Verificar</button>}
-            <p id="resultados">Aciertos: {aciertos}<br />Errores: {errores}</p>
-            <button onClick={resetResultados}>Reset</button>
-            {mensaje && <p>{mensaje}</p>}
+        <div className="p-4 mt-8 text-center bg-slate-900">
+            <p id="numeros" className="text-6xl text-slate-200">{numeros}</p>
+            {inputVisible && (
+                <input
+                    type="text"
+                    id="respuesta"
+                    className="border rounded p-2 m-4"
+                    onKeyDown={handleKeyPress}
+                />
+            )}
+            {inputVisible && (
+                <button
+                    onClick={() => verificarSuma(parseInt(document.getElementById("respuesta").value))}
+                    className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
+                >
+                    Verificar
+                </button>
+            )}
+            {mensaje && <p className="py-8 text-2xl text-slate-200">{mensaje}</p>}
+            <div className='py-8 space-x-20 text-xl text-slate-200' id="resultados">
+            <span className='p-4 bg-green-800 rounded text-slate-100 font-black'>Aciertos: {aciertos}</span>
+            <span className='p-4 bg-red-800 rounded text-slate-100 font-black'>Errores: {errores}</span>
+            </div>
+            <button
+                onClick={resetResultados}
+                className="bg-green-800 text-slate-100 font-black text-xl rounded p-4 mt-8"
+            >
+                JUEGA OTRA VEZ
+            </button>
+            
         </div>
+
     );
 }
 
