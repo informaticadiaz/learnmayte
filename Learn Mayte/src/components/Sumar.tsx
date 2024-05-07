@@ -96,7 +96,7 @@ const Sumar = () => {
     }
 
     return (
-        <div className="p-4 mt-8 text-center bg-slate-900">
+        <div className="py-10 text-center bg-slate-900">
             <p id="numeros" className="text-6xl text-slate-200">{numeros}</p>
             {inputVisible && (
                 <input
