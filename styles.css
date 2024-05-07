@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'cursive';
+    src: url('/cursiva.otf') format('opentype'); /* Formato OTF */
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,6 +20,11 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 15vh;
+}
+
+.cursiva{
+    font-family: 'cursive', sans-serif;
+    font-weight: 300;
 }
 
 .container {
