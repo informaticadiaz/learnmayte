@@ -1,5 +1,4 @@
 import './App.css'
-// import Cursiva from './components/Cursiva'
 import Cursiva from './components/Cursiva'
 
 function App() {
