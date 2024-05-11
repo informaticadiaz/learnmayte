@@ -12,7 +12,7 @@ export default function Cursiva() {
       <textarea rows="6" cols="50"
         className='border border-gray-300 rounded p-4 w-full'
         placeholder='Ingresa un texto'
-        value={inputText.toString()} // Convertir a string si es necesario
+        value={inputText}
         onChange={(e) => setInputText(e.target.value)}
       />
       <button
