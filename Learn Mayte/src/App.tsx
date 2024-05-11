@@ -1,12 +1,12 @@
 import './App.css'
 // import Cursiva from './components/Cursiva'
-import Sumar from './components/Sumar'
+import Cursiva from './components/Cursiva'
 
 function App() {
 
   return (
     <div className='h-screen bg-slate-900'>
-      <Sumar />
+      <Cursiva />
     </div>
   )
 }
