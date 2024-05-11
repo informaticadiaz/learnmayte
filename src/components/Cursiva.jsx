@@ -7,10 +7,10 @@ export default function Cursiva() {
     setTextoConvertido(inputText)
   }
   return (
-    <div className='p-10'>
+    <div className='p-10 bg-slate-900 h-screen'>
       <h1 className='font-cursiva text-8xl text-slate-400'>Letra Cursiva</h1>
       <textarea rows="3"
-        className='border border-gray-300 rounded p-4 w-full'
+        className='border border-gray-300 rounded p-4 w-full bg-slate-200 text-slate-800'
         placeholder='Ingresa un texto'
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}

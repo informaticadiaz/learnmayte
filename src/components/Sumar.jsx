@@ -96,7 +96,8 @@ const Sumar = () => {
     }
 
     return (
-        <div className="py-10 text-center bg-slate-900">
+        <div className="py-10 text-center bg-slate-900 h-screen">
+            {mensaje && <p className="py-8 text-2xl text-slate-200">{mensaje}</p>}
             <p id="numeros" className="text-6xl text-slate-200">{numeros}</p>
             {inputVisible && (
                 <input
@@ -114,7 +115,7 @@ const Sumar = () => {
                     Verificar
                 </button>
             )}
-            {mensaje && <p className="py-8 text-2xl text-slate-200">{mensaje}</p>}
+            
             <div className='py-8 space-x-20 text-xl text-slate-200' id="resultados">
             <span className='p-4 bg-green-800 rounded text-slate-100 font-black'>Aciertos: {aciertos}</span>
             <span className='p-4 bg-red-800 rounded text-slate-100 font-black'>Errores: {errores}</span>

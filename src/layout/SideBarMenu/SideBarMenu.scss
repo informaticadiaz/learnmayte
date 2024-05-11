@@ -1,0 +1,45 @@
+@import './commons.scss';
+
+
+.menuButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  
+  
+  .hamburgerIcon {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    width: 68px;
+  }
+}
+
+.SideBarMenu {
+  z-index: 1;
+  background-color: #222;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  align-items: center;
+  @include transition(width);
+
+  &.expanded {
+    width: 100%;
+    
+    
+  }
+
+  &.collapsed {
+    width: 0px;
+    margin-left: -20px;
+  }
+}
