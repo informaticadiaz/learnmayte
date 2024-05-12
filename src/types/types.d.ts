@@ -1,7 +1,7 @@
 export interface SideBarMenuItem {
   id: string;
   label: string;
-  icon: string;
+  icon: IconType;
   url: string;
 }
 
