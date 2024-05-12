@@ -5,16 +5,7 @@ import { SideBarMenuItem, SideBarMenuCard } from "../types/types";
 
 import profileImage from "../assets/logo.png";
 
-import { 
-  FcCustomerSupport,
-  FcVideoProjector,
-  FcCalendar,
-  FcCamcorder,
-  FcMusic,
-  FcBullish,
-  FcBusinessman,
- } from "react-icons/fc";
-
+import { FcCalculator, FcGraduationCap } from "react-icons/fc";
 
 
 
@@ -23,45 +14,21 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const items: SideBarMenuItem[] = [
     {
       id: "1",
-      label: "PAS",
-      icon: FcCustomerSupport,
-      url: "/#pas",
+      label: "SUMAR",
+      icon: FcCalculator,
+      url: "/sumar",
     },
     {
       id: "2",
-      label: "Legales",
-      icon: FcBusinessman,
-      url: "/#legales",
+      label: "RESTAR",
+      icon: FcCalculator,
+      url: "/restar",
     },
     {
       id: "3",
-      label: "Economia",
-      icon: FcBullish,
-      url: "/#economia",
-    },
-    {
-      id: "4",
-      label: "Entrevistas",
-      icon: FcCamcorder,
-      url: "/#entrevistas",
-    },
-    {
-      id: "5",
-      label: "Podcast",
-      icon: FcMusic,
-      url: "/#podcast",
-    },
-    {
-      id: "6",
-      label: "Calendario",
-      icon: FcCalendar,
-      url: "/#calendario",
-    },
-    {
-      id: "7",
-      label: "Videoteca",
-      icon: FcVideoProjector,
-      url: "/#videoteca",
+      label: "CURSIVA",
+      icon: FcGraduationCap,
+      url: "/cursiva",
     },
   ];
 
