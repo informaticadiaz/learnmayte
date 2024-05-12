@@ -11,15 +11,15 @@ const routes = [
     errorElement: <ErrorPage />,
   },
   {
-    path: "sumar",
+    path: "/sumar",
     element: <Sumar />,
   },
   {
-    path: "restar",
+    path: "/restar",
     element: <Restar />,
   },
   {
-    path: "cursiva",
+    path: "/cursiva",
     element: <Cursiva />,
   }
 ]
