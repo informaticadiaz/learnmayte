@@ -2,6 +2,7 @@ import App from '../App';
 import Cursiva from '../components/Cursiva';
 import Sumar from '../components/Sumar';
 import Restar from '../components/Restar';
+import AntesyDespues from '../components/AntesyDespues';
 import ErrorPage from '../error-page';
 
 const routes = [
@@ -21,6 +22,10 @@ const routes = [
   {
     path: "/cursiva",
     element: <Cursiva />,
+  },
+  {
+    path: "/antesydespues",
+    element: <AntesyDespues />,
   }
 ]
 

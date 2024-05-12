@@ -26,6 +26,12 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     },
     {
       id: "3",
+      label: "ANTES Y DESPUES",
+      icon: FcCalculator,
+      url: "/antesydespues",
+    },
+    {
+      id: "4",
       label: "CURSIVA",
       icon: FcGraduationCap,
       url: "/cursiva",
