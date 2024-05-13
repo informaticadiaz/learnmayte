@@ -1,51 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useLogic } from './utils/useLogic';
 
 export default function AntesyDespues() {
-  const [generatedNumber, setGeneratedNumber] = useState(0);
-  const [beforeNumber, setBeforeNumber] = useState('');
-  const [afterNumber, setAfterNumber] = useState('');
-  const [resultMessage, setResultMessage] = useState('');
-  const [attempts, setAttempts] = useState(0);
-  const [correctAttempts, setCorrectAttempts] = useState(0);
-  const [incorrectAttempts, setIncorrectAttempts] = useState(0);
-  const [showRetryButton, setShowRetryButton] = useState(false);
-
-  useEffect(() => {
-    generateRandomNumber();
-  }, [attempts]); // Se actualiza el número generado cada vez que cambia el número de intentos
-
-  const generateRandomNumber = () => {
-    const randomNumber = Math.floor(Math.random() * 1000);
-    setGeneratedNumber(randomNumber);
-  };
-
-  const checkAnswer = () => {
-    const before = parseInt(beforeNumber);
-    const after = parseInt(afterNumber);
-    const correctBefore = generatedNumber - 1;
-    const correctAfter = generatedNumber + 1;
-
-    if (before === correctBefore && after === correctAfter) {
-      setResultMessage('¡Respuesta correcta!');
-      setCorrectAttempts(correctAttempts + 1);
-    } else {
-      setResultMessage('Respuesta incorrecta, intenta de nuevo.');
-      setIncorrectAttempts(incorrectAttempts + 1);
-    }
-
-    setAttempts(attempts + 1);
-    setBeforeNumber('');
-    setAfterNumber('');
-
-    if (attempts === 9) {
-      setShowRetryButton(true);
-      if (correctAttempts > 7) {
-        setResultMessage('¡Prueba superada!');
-      } else {
-        setResultMessage('No pasaste la prueba.');
-      }
-    }
-  };
+  const {
+    generatedNumber,
+    beforeNumber,
+    afterNumber,
+    resultMessage,
+    attempts,
+    correctAttempts,
+    incorrectAttempts,
+    showRetryButton,
+    setBeforeNumber,
+    setAfterNumber,
+    generateRandomNumber,
+    checkAnswer,
+    retryTest,
+  } = useLogic();
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
@@ -53,14 +24,9 @@ export default function AntesyDespues() {
     }
   };
 
-  const retryTest = () => {
-    setShowRetryButton(false);
-    setResultMessage('');
-    setAttempts(0);
-    setCorrectAttempts(0);
-    setIncorrectAttempts(0);
+  useEffect(() => {
     generateRandomNumber();
-  };
+  }, []);
 
   return (
     <div className="mx-auto p-10 bg-slate-900 h-screen">
