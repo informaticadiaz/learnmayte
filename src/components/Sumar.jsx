@@ -6,7 +6,7 @@ const Sumar = () => {
     const [aciertos, setAciertos] = useState(0);
     const [errores, setErrores] = useState(0);
     const [intentos, setIntentos] = useState(0);
-    const [mensaje, setMensaje] = useState("");
+    const [mensaje, setMensaje] = useState("Vamos a sumar");
     const [inputVisible, setInputVisible] = useState(true);
 
     useEffect(() => {
