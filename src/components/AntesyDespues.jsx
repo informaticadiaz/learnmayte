@@ -40,7 +40,7 @@ export default function AntesyDespues() {
       <div className="flex items-center justify-center mt-4">
         <input
           type="number"
-          className="border rounded py-2 px-4 mr-2"
+          className="border rounded py-2 sm:mr-2 w-20 text-center"
           placeholder="Antes"
           value={beforeNumber}
           onChange={(e) => setBeforeNumber(e.target.value)}
@@ -50,7 +50,7 @@ export default function AntesyDespues() {
         <span className="mx-4 text-slate-300">{generatedNumber}</span>
         <input
           type="number"
-          className="border rounded py-2 px-4 ml-2"
+          className="border rounded py-2 sm:px-4 text-center sm:ml-2 w-20 "
           placeholder="Después"
           value={afterNumber}
           onChange={(e) => setAfterNumber(e.target.value)}
