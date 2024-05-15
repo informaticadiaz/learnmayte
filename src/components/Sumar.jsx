@@ -47,6 +47,9 @@ const Sumar = () => {
             incrementarErrores();
         }
         generarNumeros();
+    
+        // Limpiar contenido del input
+        document.getElementById("respuesta").value = "";
     }
 
     const evaluarResultado = () => {
