@@ -104,7 +104,7 @@ const Sumar = () => {
             <p id="numeros" className="text-6xl text-slate-200">{numeros}</p>
             {inputVisible && (
                 <input
-                    type="text"
+                    type="number"
                     id="respuesta"
                     className="border rounded p-2 m-4"
                     onKeyDown={handleKeyPress}
