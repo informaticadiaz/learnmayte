@@ -4,6 +4,7 @@ import Sumar from '../components/Sumar';
 import Restar from '../components/Restar';
 import AntesyDespues from '../components/AntesyDespues';
 import ErrorPage from '../error-page';
+import Tarea from '../pages/Tarea';
 
 const routes = [
   {
@@ -26,6 +27,10 @@ const routes = [
   {
     path: "/antesydespues",
     element: <AntesyDespues />,
+  },
+  {
+    path: "/tarea",
+    element: <Tarea />,
   }
 ]
 

@@ -36,6 +36,12 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       icon: FcGraduationCap,
       url: "/cursiva",
     },
+    {
+      id: "5",
+      label: "TAREA",
+      icon: FcGraduationCap,
+      url: "/tarea",
+    },
   ];
 
   const card: SideBarMenuCard = {
