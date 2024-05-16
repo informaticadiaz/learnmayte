@@ -17,7 +17,7 @@ export default function Tarea() {
             </a>
 <a  href="https://drive.google.com/drive/folders/1-088MYFDpZcKCrpij3cIGQem13c1C7WD">
           <li className='text-xl text-slate-400 px-4 py-2 mt-2 sm:w-6/12 rounded bg-slate-700'>
-              Tarea del dia: 15/05
+              Tarea del dia: 16/05
             </li>
             </a>
         </ul>
