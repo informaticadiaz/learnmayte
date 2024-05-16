@@ -9,13 +9,12 @@ export default function Tarea() {
         <h1 className='font-cursiva text-8xl text-slate-400'>Tarea</h1>
         <div>
 
-        <ul>
+          <ul>
+          <a  href="https://drive.google.com/drive/folders/1tSrcDq7PkxQ-wBY9jvEdkzaLbVrZu1BQ?usp=sharing">
           <li className='text-xl text-slate-400 px-4 py-2 mt-2 sm:w-6/12 rounded bg-slate-700'>
-            <a
-            href="https://drive.google.com/drive/folders/1tSrcDq7PkxQ-wBY9jvEdkzaLbVrZu1BQ?usp=sharing">
               Tarea del dia: 15/05
+            </li>
             </a>
-          </li>
         </ul>
       
         </div>
