@@ -5,6 +5,7 @@ import Restar from '../components/Restar';
 import AntesyDespues from '../components/AntesyDespues';
 import ErrorPage from '../error-page';
 import Tarea from '../pages/Tarea';
+import Dictionary from '../components/Dictionary';
 
 const routes = [
   {
@@ -31,6 +32,10 @@ const routes = [
   {
     path: "/tarea",
     element: <Tarea />,
+  },
+  {
+    path: "/diccionario",
+    element: <Dictionary />,
   }
 ]
 
