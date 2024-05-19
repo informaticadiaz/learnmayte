@@ -9,7 +9,7 @@ export default function Cursiva() {
   }
   return (
     <MainLayout>
-    <div className='p-10 bg-slate-900 h-screen'>
+    <div className='p-10 bg-dark h-screen'>
       <h1 className='font-cursiva text-8xl text-slate-400'>Letra Cursiva</h1>
       <textarea rows="3"
         className='border border-gray-300 rounded p-4 w-full bg-slate-200 text-slate-800'
