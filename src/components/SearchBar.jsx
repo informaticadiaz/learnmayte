@@ -48,7 +48,7 @@ const SearchBar = ({ onSearch, dictionary }) => {
       variant="outlined" 
         fullWidth 
         InputLabelProps={{
-          style: { zIndex: 0 },
+          style: { zIndex: 0, color: 'white' },
         }}
     />
     <div className='mt-4'>
