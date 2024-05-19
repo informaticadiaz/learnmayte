@@ -8,11 +8,23 @@ const SearchBar = ({ onSearch, dictionary }) => {
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
-    // Filtrar las sugerencias basadas en el valor de entrada
+  
+    // Filter suggestions based on the input value
     const filteredSuggestions = dictionary.filter(word =>
       word.toLowerCase().startsWith(value.toLowerCase())
     );
-    setSuggestions(filteredSuggestions);
+  
+    if (value === '') { // Check if input value is empty
+      setSuggestions([]); // Clear suggestions when input is empty
+    } else {
+      setSuggestions(filteredSuggestions);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' && inputValue.trim()) { // Check if Enter is pressed and input is not empty
+      handleSearch();
+    }
   };
 
   const handleSearch = () => {
@@ -24,15 +36,20 @@ const SearchBar = ({ onSearch, dictionary }) => {
     onSearch(suggestion);
     setSuggestions([]);
   };
+  
 
   return (
     <div className='flex flex-col items-center p-4 md:p-8 bg:gray-100'>
     <TextField 
       label="Buscar palabra..." 
       value={inputValue} 
-      onChange={handleInputChange} 
+        onChange={handleInputChange} 
+        onKeyDown={handleKeyDown}
       variant="outlined" 
-      fullWidth 
+        fullWidth 
+        InputLabelProps={{
+          style: { zIndex: 0 },
+        }}
     />
     <div className='mt-4'>
     <Button variant="contained" color="primary" onClick={handleSearch}>
