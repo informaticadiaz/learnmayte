@@ -5,7 +5,7 @@ import { SideBarMenuItem, SideBarMenuCard } from "../types/types";
 
 import profileImage from "../assets/logo.png";
 
-import { FcCalculator, FcGraduationCap } from "react-icons/fc";
+import { FcCalculator, FcGraduationCap, FcAddressBook } from "react-icons/fc";
 
 
 
@@ -42,6 +42,12 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       icon: FcGraduationCap,
       url: "/tarea",
     },
+    {
+      id: "6",
+      label: "DICCIONARIO",
+      icon: FcAddressBook,
+      url: "/diccionario",
+    }
   ];
 
   const card: SideBarMenuCard = {
