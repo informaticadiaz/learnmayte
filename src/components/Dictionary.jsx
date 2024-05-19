@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
+import MainLayout from '../layout/MainLayout';
 
 const Dictionary = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -342,14 +343,15 @@ const dictionary = {
   };
 
   return (
-    <div className='flex flex-col items-center p-4 md:p-8 bg:gray-100 min-h-screen'>
+    <MainLayout>
+    <div className='flex flex-col items-center p-4 md:p-8 bg-dark min-h-screen'>
       <SearchBar onSearch={handleSearch} dictionary={Object.keys(dictionary)} />
-      
-      <div className='mt-6 w-full max-w-2xl bg-white p-6 rounded-lg shadow-md'>
-        <h2 className='text-xl font-semibold text-gray-800 mb-4'>Definición</h2>
+      <div className='mt-6 w-full bg-dark max-w-2xl text-t-dark p-6 rounded-lg shadow-md'>
+        <h2 className='text-xl font-semibold bg-dark text-t-dark mb-4'>Definición</h2>
         {searchTerm && <p>{definition}</p>}
       </div>
-    </div>
+      </div>
+      </MainLayout>
   );
 };
 
