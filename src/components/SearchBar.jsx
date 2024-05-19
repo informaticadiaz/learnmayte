@@ -39,7 +39,7 @@ const SearchBar = ({ onSearch, dictionary }) => {
   
 
   return (
-    <div className='flex flex-col items-center p-4 md:p-8 bg:gray-100'>
+    <div className='flex flex-col items-center p-4 md:p-8 bg:gray-100 text-slate-200'>
     <TextField 
       label="Buscar palabra..." 
       value={inputValue} 
