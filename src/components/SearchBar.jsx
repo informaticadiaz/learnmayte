@@ -48,8 +48,10 @@ const SearchBar = ({ onSearch, dictionary }) => {
       variant="outlined" 
         fullWidth 
         InputLabelProps={{
-          style: { zIndex: 0, color: 'white' },
+          style: { zIndex: 0, color: 'blue' },
         }}
+        InputProps={{
+          style: { color: 'blue' },}}
     />
     <div className='mt-4'>
     <Button variant="contained" color="primary" onClick={handleSearch}>
