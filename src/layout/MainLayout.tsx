@@ -14,27 +14,27 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const items: SideBarMenuItem[] = [
     {
       id: "1",
-      label: "SUMAR",
+      label: "MATEMATICA",
       icon: FcCalculator,
-      url: "/sumar",
+      url: "/matematica",
     },
     {
       id: "2",
-      label: "RESTAR",
+      label: "LENGUA",
       icon: FcCalculator,
-      url: "/restar",
+      url: "/lengua",
     },
     {
       id: "3",
-      label: "ANTES Y DESPUES",
+      label: "SOCIALES",
       icon: FcCalculator,
-      url: "/antesydespues",
+      url: "/sociales",
     },
     {
       id: "4",
-      label: "CURSIVA",
+      label: "NATURALES",
       icon: FcGraduationCap,
-      url: "/cursiva",
+      url: "/naturales",
     },
     {
       id: "5",

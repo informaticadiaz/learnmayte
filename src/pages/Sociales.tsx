@@ -1,8 +1,9 @@
 import MainLayout from "../layout/MainLayout"
-export default function Cursiva() {
+
+export default function Sociales() {
   return (
     <MainLayout>
-      <div>Cursiva</div>
+      <div></div>
     </MainLayout>
   )
 }

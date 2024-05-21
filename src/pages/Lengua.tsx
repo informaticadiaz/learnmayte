@@ -1,8 +1,9 @@
 import MainLayout from '../layout/MainLayout'
-export default function Restar() {
+
+export default function Lengua() {
   return (
     <MainLayout>
-      <div>Restar</div>
+      <div></div>
     </MainLayout>
   )
 }

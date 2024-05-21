@@ -1,8 +1,8 @@
 import App from '../App';
-import Cursiva from '../components/Cursiva';
-import Sumar from '../components/Sumar';
-import Restar from '../components/Restar';
-import AntesyDespues from '../components/AntesyDespues';
+import Matematica from '../pages/Matematica';
+import Lengua from '../pages/Lengua';
+import Sociales from '../pages/Sociales';
+import Naturales from '../pages/Naturales';
 import ErrorPage from '../error-page';
 import Tarea from '../pages/Tarea';
 import Dictionary from '../components/Dictionary';
@@ -14,20 +14,20 @@ const routes = [
     errorElement: <ErrorPage />,
   },
   {
-    path: "/sumar",
-    element: <Sumar />,
+    path: "/matematica",
+    element: <Matematica />,
   },
   {
-    path: "/restar",
-    element: <Restar />,
+    path: "/lengua",
+    element: <Lengua />,
   },
   {
-    path: "/cursiva",
-    element: <Cursiva />,
+    path: "/sociales",
+    element: <Sociales />,
   },
   {
-    path: "/antesydespues",
-    element: <AntesyDespues />,
+    path: "/naturales",
+    element: <Naturales />,
   },
   {
     path: "/tarea",

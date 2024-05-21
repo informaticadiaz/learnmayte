@@ -1,9 +1,10 @@
 import MainLayout from "../layout/MainLayout"
 
-export default function Sumar() {
+export default function Matematica() {
+  
   return (
     <MainLayout>
-      <div>Sumar</div>
+      <></>
     </MainLayout>
   )
 }
