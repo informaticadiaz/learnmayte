@@ -36,7 +36,7 @@ const routes = [
   {
     path: "/diccionario",
     element: <Dictionary />,
-  }
+  },
 ]
 
 export default routes
