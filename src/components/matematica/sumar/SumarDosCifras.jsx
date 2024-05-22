@@ -60,12 +60,13 @@ export default function SumarDosCifras() {
               className='p-4 m-4'
             />
           </div>
+          <button className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2" type="submit">Comprobar</button>
         </form>
-        <button className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2" type="submit">Comprobar</button>
       </div>
     </MainLayout>
   )
 }
+
 
 {
   <div className='p-10 bg-blue-200 '>
