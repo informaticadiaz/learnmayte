@@ -7,6 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { blueGrey } from "@mui/material/colors";
 
 
 const data = [
@@ -65,13 +66,13 @@ const data = [
 function Media() {
 
   return (
-    <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+    <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 bg-dark">
       {data.map((item) => (
-        <Card sx={{ maxWidth: 345, m: 2 }}>
+        <Card sx={{ maxWidth: 345, m: 2, px: 2, borderRadius: 5, bgcolor: blueGrey[800] }} >
           <CardHeader
             avatar={
               <Avatar
-                alt="Ted talk"
+                alt={item.title}
                 src={item.avatar}
               />
             }
