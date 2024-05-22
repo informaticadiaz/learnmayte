@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { blueGrey } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 
 
 const data = [
@@ -15,6 +16,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Sumar',
     description: 'Una Cifra',
+    url: '/sumar/una-cifra',
     image: '/src/assets/monito-suma-g.jpeg',
     paragraph: 'Suma numeros de una cifra',
   },
@@ -22,6 +24,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Sumar',
     description: 'Dos Cifras',
+    url: '/sumar/dos-cifras',
     image: '/src/assets/monito-suma-e.jpeg',
     paragraph: 'Suma numeros dos cifras',
   },
@@ -29,6 +32,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Sumar',
     description: 'Tres Cifras',
+    url: '/sumar/tres-cifras',
     image: '/src/assets/monito-suma-f.jpeg',
     paragraph: 'Suma numeros tres cifras',
   },
@@ -36,6 +40,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Restar',
     description: 'Una Cifra',
+    url: '/restar/una-cifra',
     image: '/src/assets/monito-suma-g.jpeg',
     paragraph: 'Resta numeros de una cifra',
   },
@@ -43,6 +48,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Restar',
     description: 'Dos Cifras',
+    url: '/restar/dos-cifra',
     image: '/src/assets/monito-suma-e.jpeg',
     paragraph: 'Resta numeros dos cifras',
   },
@@ -50,6 +56,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Restar',
     description: 'Tres Cifras',
+    url: '/restar/tres-cifra',
     image: '/src/assets/monito-suma-f.jpeg',
     paragraph: 'Resta numeros tres cifras',
   },
@@ -57,6 +64,7 @@ const data = [
     avatar: '/src/assets/wall.webp',
     title: 'Multiplicar',
     description: 'Practica',
+    url: '/multiplicar',
     image: '/src/assets/monito-suma-e.jpeg',
     paragraph: 'Aprende las tablas',
   }
@@ -67,8 +75,8 @@ function Media() {
 
   return (
     <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 bg-dark">
-      {data.map((item) => (
-        <Card sx={{ maxWidth: 345, m: 2, px: 2, borderRadius: 5, bgcolor: blueGrey[800] }} >
+      {data.map((item, index) => (
+        <Card key={index} sx={{ maxWidth: 345, m: 2, px: 2, borderRadius: 5, bgcolor: blueGrey[800] }} >
           <CardHeader
             avatar={
               <Avatar
@@ -84,12 +92,14 @@ function Media() {
             title={item.title}
             subheader={item.description}
           />
+          <Link to={`${item.url}`}>
           <CardMedia
             component="img"
             height="140"
             image={item.image}
             alt={item.title}
-          />
+            />
+          </Link>
           <CardContent>
             <Typography variant="body2" color="text.secondary" component="p">
                 {item.paragraph}
