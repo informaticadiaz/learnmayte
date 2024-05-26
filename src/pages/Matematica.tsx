@@ -17,7 +17,7 @@ const data = [
     title: 'Sumar',
     description: 'Una Cifra',
     url: '/sumar/una-cifra',
-    image: '/src/assets/monito-suma-g.jpeg',
+    image: '/monito-suma-g.jpeg',
     paragraph: 'Suma numeros de una cifra',
   },
   {
@@ -25,7 +25,7 @@ const data = [
     title: 'Sumar',
     description: 'Dos Cifras',
     url: '/sumar/dos-cifras',
-    image: '/src/assets/monito-suma-e.jpeg',
+    image: '/monito-suma-e.jpeg',
     paragraph: 'Suma numeros dos cifras',
   },
   {
@@ -33,7 +33,7 @@ const data = [
     title: 'Sumar',
     description: 'Tres Cifras',
     url: '/sumar/tres-cifras',
-    image: '/src/assets/monito-suma-f.jpeg',
+    image: '/monito-suma-f.jpeg',
     paragraph: 'Suma numeros tres cifras',
   },
   {
@@ -41,7 +41,7 @@ const data = [
     title: 'Restar',
     description: 'Una Cifra',
     url: '/restar/una-cifra',
-    image: '/src/assets/monito-suma-g.jpeg',
+    image: '/monito-suma-g.jpeg',
     paragraph: 'Resta numeros de una cifra',
   },
   {
@@ -49,7 +49,7 @@ const data = [
     title: 'Restar',
     description: 'Dos Cifras',
     url: '/restar/dos-cifra',
-    image: '/src/assets/monito-suma-e.jpeg',
+    image: '/monito-suma-e.jpeg',
     paragraph: 'Resta numeros dos cifras',
   },
   {
@@ -57,7 +57,7 @@ const data = [
     title: 'Restar',
     description: 'Tres Cifras',
     url: '/restar/tres-cifra',
-    image: '/src/assets/monito-suma-f.jpeg',
+    image: '/monito-suma-f.jpeg',
     paragraph: 'Resta numeros tres cifras',
   },
   {
@@ -65,7 +65,7 @@ const data = [
     title: 'Multiplicar',
     description: 'Practica',
     url: '/multiplicar',
-    image: '/src/assets/monito-suma-e.jpeg',
+    image: '/monito-suma-e.jpeg',
     paragraph: 'Aprende las tablas',
   }
 ]
