@@ -41,10 +41,11 @@ export default function SumarDosCifras() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const centenasCorrectas = resultadoCentenas === 0 ? respuestaCentena === '' : parseInt(respuestaCentena) === resultadoCentenas;
     if (
       parseInt(respuestaUnidades) === resultadoUnidades &&
       parseInt(respuestaDecenas) === resultadoDecenas &&
-      parseInt(respuestaCentena) === resultadoCentenas
+      centenasCorrectas
     ) {
       setMensaje("¡Respuesta correcta!");
     } else {
@@ -81,32 +82,23 @@ export default function SumarDosCifras() {
           <div className="grid grid-cols-3 gap-2 text-center mt-2">
               <div className="bg-indigo-700 p-4 rounded col-span-1">
                 <input
-                  type="number"
                   value={respuestaCentena}
                   onChange={handleChangeCentenas}
-                  max="99"
-                  min="0"
-                  className="p-2 py-4 m-4"
+                  className="w-12 p-2 py-4 my-4 text-center"
                 />
               </div>
             <div className="bg-green-100 p-4 rounded col-span-1">
               <input
-                type="number"
                 value={respuestaDecenas}
                 onChange={handleChangeDecenas}
-                max="99"
-                min="0"
-                className="p-2 py-4 m-4"
+                className="w-12 p-4 m-4 text-center"
               />
             </div>
             <div className="bg-red-100 p-4 rounded col-span-1">
               <input
-                type="number"
                 value={respuestaUnidades}
                 onChange={handleChangeUnidades}
-                max="9"
-                min="0"
-                className="p-4 m-4"
+                className="w-12 p-4 m-4 text-center"
               />
               </div>
             </div>
