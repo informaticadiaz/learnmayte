@@ -55,7 +55,7 @@ export default function SumarDosCifras() {
 
   return (
     <MainLayout>
-      <div className="p-10 sm:p-20 bg-slate-900 ">
+      <div className="p-10 sm:p-20 bg-slate-900">
         {/* suma */}
         <div className="grid grid-cols-3 gap-2 text-center text-4xl sm:text-7xl">   
           <div className="bg-blue-200 p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
@@ -82,40 +82,32 @@ export default function SumarDosCifras() {
               <div className="bg-indigo-700 p-4 rounded col-span-1">
                 <input
                   value={respuestaCentena}
-                  type="number"
-                  min="0"
-                  max="9"
                   onChange={handleChangeCentenas}
-                  className="sm:px-2 sm:py-4 sm:my-4 text-center"
+                  className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
                 />
               </div>
             <div className="bg-green-100 p-4 rounded col-span-1">
               <input
                 value={respuestaDecenas}
-                type="number"
-                min="0"
-                max="9"
                 onChange={handleChangeDecenas}
-                className="sm:px-2 sm:py-4 sm:my-4 text-center"
+                className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
               />
             </div>
             <div className="bg-red-100 p-4 rounded col-span-1">
               <input
                 value={respuestaUnidades}
-                type="number"
-                min="0"
-                max="9"
                 onChange={handleChangeUnidades}
-                className="sm:px-2 sm:py-4 sm:my-4 text-center"
+                className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
               />
               </div>
-            <button
-              className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
+              <button
+              className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
               type="submit"
             >
-              Comprobar
-            </button>
+              CORREGIR
+            </button>    
         </form>
+        
         <p>{mensaje}</p>
       </div>
     </MainLayout>
