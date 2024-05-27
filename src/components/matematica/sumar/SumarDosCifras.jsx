@@ -55,39 +55,38 @@ export default function SumarDosCifras() {
 
   return (
     <MainLayout>
-      <div className="p-20 bg-blue-200 ">
+      <div className="p-10 sm:p-20 bg-slate-900 ">
         {/* suma */}
-        <div className="grid grid-cols-3 gap-2 text-center">
+        <div className="grid grid-cols-3 gap-2 text-center text-4xl sm:text-7xl">   
           <div className="bg-blue-200 p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
-            <p className="text-7xl text-yellow-200">+</p>
+            <p className=" text-yellow-200">+</p>
           </div>
           <div className="bg-green-100 p-4 rounded col-span-1">
-            <p className="text-7xl">{d1}</p>
+            <p>{d1}</p>
           </div>
           <div className="bg-red-100 p-4 rounded col-span-1">
-            <p className="text-7xl">{u1}</p>
+            <p>{u1}</p>
           </div>
           <div className="bg-green-100 p-4 rounded col-span-1 row-span-1">
-            <p className="text-7xl">{d2}</p>
+            <p>{d2}</p>
           </div>
           <div>
             <div className="bg-red-100 p-4 rounded col-span-1">
-              <p className="text-7xl">{u2}</p>
+              <p>{u2}</p>
             </div>
           </div>
         </div>
         <hr className="my-2 border-yellow-200 border-2" />
         {/* input respuesta */}
-        <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-3 gap-2 text-center mt-2">
+        <form onSubmit={handleSubmit} className="grid grid-cols-3 gap-2 text-4xl text-center mt-2">     
               <div className="bg-indigo-700 p-4 rounded col-span-1">
                 <input
                   value={respuestaCentena}
                   type="number"
                   min="0"
-                  max="99"
+                  max="9"
                   onChange={handleChangeCentenas}
-                  className="p-2 py-4 my-4 text-center"
+                  className="sm:px-2 sm:py-4 sm:my-4 text-center"
                 />
               </div>
             <div className="bg-green-100 p-4 rounded col-span-1">
@@ -95,9 +94,9 @@ export default function SumarDosCifras() {
                 value={respuestaDecenas}
                 type="number"
                 min="0"
-                max="99"
+                max="9"
                 onChange={handleChangeDecenas}
-                className="w-12 p-4 m-4 text-center"
+                className="sm:px-2 sm:py-4 sm:my-4 text-center"
               />
             </div>
             <div className="bg-red-100 p-4 rounded col-span-1">
@@ -105,12 +104,11 @@ export default function SumarDosCifras() {
                 value={respuestaUnidades}
                 type="number"
                 min="0"
-                max="99"
+                max="9"
                 onChange={handleChangeUnidades}
-                className="w-12 p-4 m-4 text-center"
+                className="sm:px-2 sm:py-4 sm:my-4 text-center"
               />
               </div>
-            </div>
             <button
               className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
               type="submit"
