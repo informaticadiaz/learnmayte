@@ -1,16 +1,13 @@
 import SideBarMenu from "./SideBarMenu/SideBarMenu";
-
-
 import { SideBarMenuItem, SideBarMenuCard } from "../types/types";
-
 import profileImage from "../assets/logo.png";
-
 import { FcCalculator, FcGraduationCap, FcAddressBook } from "react-icons/fc";
+import { Outlet } from "react-router-dom";
 
 
 
 
-const MainLayout = ({ children }: { children: React.ReactNode }) => {
+const MainLayout = () => {
   const items: SideBarMenuItem[] = [
     {
       id: "1",
@@ -38,9 +35,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     },
     {
       id: "5",
-      label: "TAREA",
+      label: "CURSIVA",
       icon: FcGraduationCap,
-      url: "/tarea",
+      url: "/cursiva",
     },
     {
       id: "6",
@@ -61,7 +58,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <SideBarMenu items={items} card={card} />
-      <main>{children}</main>
+      <main><Outlet /></main>
     </div>
   );
 };

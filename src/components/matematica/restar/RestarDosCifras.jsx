@@ -1,9 +1,5 @@
-import MainLayout from "../../../layout/MainLayout"
-
 export default function RestarDosCifras() {
-  return (
-    <MainLayout>
+  return ( 
       <div>RestarDosCifras</div>
-    </MainLayout>
   )
 }

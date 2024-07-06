@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import MainLayout from '../layout/MainLayout'
 
 export default function Cursiva() {
   const [inputText, setInputText] = useState('')
@@ -8,7 +7,6 @@ export default function Cursiva() {
     setTextoConvertido(inputText)
   }
   return (
-    <MainLayout>
     <div className='p-10 bg-dark h-screen'>
       <h1 className='font-cursiva text-8xl text-slate-400'>Letra Cursiva</h1>
       <textarea rows="3"
@@ -25,6 +23,5 @@ export default function Cursiva() {
       </button>
       <p className='mt-4 font-cursiva text-9xl text-slate-400'>{textoConvertido}</p>
       </div>
-      </MainLayout>
   )
 }

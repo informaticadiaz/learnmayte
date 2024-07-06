@@ -1,4 +1,3 @@
-import MainLayout from "../../../layout/MainLayout";
 import { useState, useEffect } from "react";
 
 export default function SumarDosCifras() {
@@ -54,7 +53,6 @@ export default function SumarDosCifras() {
   };
 
   return (
-    <MainLayout>
       <div className="p-10 sm:p-20 bg-slate-900">
         {/* suma */}
         <div className="grid grid-cols-3 gap-2 text-center text-4xl sm:text-7xl">   
@@ -109,7 +107,6 @@ export default function SumarDosCifras() {
         </form>
         
         <p>{mensaje}</p>
-      </div>
-    </MainLayout>
+      </div> 
   );
 }

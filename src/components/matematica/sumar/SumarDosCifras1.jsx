@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import MainLayout from '../../../layout/MainLayout'
+
 
 export default function SumarDosCifras() {
   const [num1, setNum1] = useState(0);
@@ -33,7 +33,6 @@ export default function SumarDosCifras() {
   };
 
   return (
-    <MainLayout>
       <div className='p-10 bg-gray-900 h-screen flex flex-col justify-center items-center text-white'>
         <p className="text-7xl mb-4 tracking-[0.5em]">
           {num1}
@@ -63,10 +62,8 @@ export default function SumarDosCifras() {
           <button className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2" type="submit">Comprobar</button>
         </form>
       </div>
-    </MainLayout>
   )
 }
-
 
 {
   <div className='p-10 bg-blue-200 '>

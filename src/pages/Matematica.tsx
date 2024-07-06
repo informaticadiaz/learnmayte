@@ -1,4 +1,3 @@
-import MainLayout from "../layout/MainLayout"
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
@@ -9,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { blueGrey } from "@mui/material/colors";
 import { Link } from "react-router-dom";
-
 
 const data = [
   {
@@ -70,7 +68,6 @@ const data = [
   }
 ]
 
-
 function Media() {
 
   return (
@@ -115,9 +112,7 @@ function Media() {
 
 export default function Matematica() {
 
-  return (
-    <MainLayout>
+  return (    
       <Media />
-    </MainLayout>
   )
 }

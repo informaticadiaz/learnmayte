@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import MainLayout from '../layout/MainLayout';
+
 import { useLogic } from './utils/useLogic';
 
 export default function AntesyDespues() {
@@ -32,7 +32,6 @@ export default function AntesyDespues() {
   return (
     
 
-    <MainLayout>
     <div className="mx-auto p-10 bg-slate-900 h-screen">
       <h1 className="container mx-auto text-center text-2xl font-semibold mb-4 text-slate-300">Antes y Después</h1>
       <p className="container mx-auto text-center text-xl font-semibold mb-4 text-slate-300">Adivina el número</p>
@@ -91,6 +90,5 @@ export default function AntesyDespues() {
         <p className="text-center text-lg mt-2 text-slate-300">Intentos restantes: {10 - attempts}</p>        
       </div>
       </div>
-      </MainLayout>    
   );
 }

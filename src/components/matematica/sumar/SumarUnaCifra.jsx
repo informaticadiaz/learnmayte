@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import MainLayout from '../../../layout/MainLayout'
 
 export default function SumarUnaCifra() {
   const [numeros, setNumeros] = useState("");
@@ -101,7 +100,7 @@ export default function SumarUnaCifra() {
   }
 
   return (
-    <MainLayout>
+    
       <div className="py-10 text-center bg-slate-900 h-screen">
             {mensaje && <p className="py-8 text-2xl text-slate-200">{mensaje}</p>}
             <p id="numeros" className="text-6xl text-slate-200">{numeros}</p>
@@ -134,6 +133,6 @@ export default function SumarUnaCifra() {
             </button>
             
         </div>
-    </MainLayout>
+    
   )
 }
