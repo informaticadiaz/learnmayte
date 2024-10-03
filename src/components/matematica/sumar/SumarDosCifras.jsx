@@ -109,7 +109,7 @@ export default function SumarDosCifras() {
             <div className="grid grid-cols-3 gap-2 text-4xl text-center mt-2">
               <div className="bg-btn-dark p-4 rounded col-span-1">
                 <input
-                  type="number"
+                  
                   value={respuestaCentena}
                   onChange={handleChangeCentenas}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
@@ -117,7 +117,7 @@ export default function SumarDosCifras() {
               </div>
               <div className="bg-btn-dark p-4 rounded col-span-1">
                 <input
-                  type="number"
+                  
                   value={respuestaDecenas}
                   onChange={handleChangeDecenas}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
@@ -125,7 +125,7 @@ export default function SumarDosCifras() {
               </div>
               <div className="bg-btn-dark p-4 rounded col-span-1">
                 <input
-                  type="number"
+                  
                   value={respuestaUnidades}
                   onChange={handleChangeUnidades}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
