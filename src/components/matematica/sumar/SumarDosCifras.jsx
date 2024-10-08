@@ -88,17 +88,17 @@ export default function SumarDosCifras() {
             <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
               <p className=" text-yellow-200">+</p>
             </div>
-            <div className="bg-btn-dark p-4 rounded col-span-1">
+            <div className="bg-btn-dark p-4 rounded col-span-1 text-t-btn-light">
               <p>{d1}</p>
             </div>
-            <div className="bg-btn-dark p-4 rounded col-span-1">
+            <div className="bg-btn-dark p-4 rounded col-span-1 text-t-btn-light">
               <p>{u1}</p>
             </div>
-            <div className="bg-btn-dark p-4 rounded col-span-1 row-span-1">
+            <div className="bg-btn-dark p-4 rounded col-span-1 row-span-1 text-t-btn-light">
               <p>{d2}</p>
             </div>
             <div>
-              <div className="bg-btn-dark p-4 rounded col-span-1">
+              <div className="bg-btn-dark p-4 rounded col-span-1 text-t-btn-light">
                 <p>{u2}</p>
               </div>
             </div>

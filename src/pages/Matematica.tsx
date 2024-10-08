@@ -73,7 +73,7 @@ function Media() {
   return (
     <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 bg-dark">
       {data.map((item, index) => (
-        <Card key={index} sx={{ maxWidth: 345, m: 2, px: 2, borderRadius: 5, bgcolor: blueGrey[800] }} >
+        <Card key={index} sx={{ maxWidth: 345, m: 2, px: 2, borderRadius: 5, bgcolor: blueGrey[700] }}>
           <CardHeader
             avatar={
               <Avatar
