@@ -32,7 +32,7 @@ function TablaMultiplicar({ numeroTabla }) {
   };
 
   return (
-    <div className="p-10 sm:p-20 bg-dark h-screen text-t-btn-light">
+    <div className="mt-8 bg-dark text-t-btn-light">
       <h1 className="text-5xl text-center">Tabla del {numeroTabla}</h1>
 
       {/* Mostrar tabla ya resuelta */}
