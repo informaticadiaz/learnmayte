@@ -46,18 +46,18 @@ function TablaMultiplicar({ numeroTabla }) {
       {indice <= 10 && (
         <>
           <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
-            <p className="text-7xl">{numeroTabla} x {indice}</p>
-            <p className="text-7xl">=</p>
+            <p className="text-lg sm:text-7xl">{numeroTabla} x {indice}</p>
+            <p className="text-lg sm:text-7xl">=</p>
             <div className="flex justify-center">
               <input
                 type="number"
                 value={respuesta}
                 onChange={(e) => setRespuesta(e.target.value)}
-                className="w-10 sm:w-20 rounded flex text-black text-center text-lgsm:text-2xl"
+                className="w-10 sm:w-20 rounded flex text-black text-center text-lg sm:text-2xl"
               />
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-2 py-8 text-center text-2xl sm:text-2xl">
+          <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
             <button
               className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
               onClick={corregirRespuesta}
@@ -71,13 +71,13 @@ function TablaMultiplicar({ numeroTabla }) {
               Sugerir
             </button>
           </div>
-          <p className="text-5xl text-center">{mensaje}</p>
+          <p className="text-lg sm:text-5xl text-center">{mensaje}</p>
         </>
       )}
 
       {/* Mensaje al finalizar la tabla */}
       {indice > 10 && (
-        <p className="text-5xl text-center">¡Has completado la tabla del {numeroTabla}!</p>
+        <p className="text-lg sm:text-5xl text-center">¡Has completado la tabla del {numeroTabla}!</p>
       )}
     </div>
   );
