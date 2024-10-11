@@ -46,8 +46,8 @@ function TablaMultiplicar({ numeroTabla }) {
       {indice <= 10 && (
         <>
           <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
-            <p className="text-lg sm:text-7xl">{numeroTabla} x {indice}</p>
-            <p className="text-lg sm:text-7xl">=</p>
+            <p className="text-2xl sm:text-7xl">{numeroTabla} x {indice}</p>
+            <p className="text-2xl sm:text-7xl">=</p>
             <div className="flex justify-center">
               <input
                 type="number"
@@ -59,13 +59,13 @@ function TablaMultiplicar({ numeroTabla }) {
           </div>
           <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
             <button
-              className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
+              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
               onClick={corregirRespuesta}
             >
               Corregir
             </button>
             <button
-              className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
+              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
               onClick={darSugerencia}
             >
               Sugerir
