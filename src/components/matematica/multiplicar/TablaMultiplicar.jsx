@@ -57,7 +57,7 @@ function TablaMultiplicar({ numeroTabla }) {
               />
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
+          <div className="grid grid-cols-2 gap-2 py-8 text-center text-lg sm:text-2xl">
             <button
               className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
               onClick={corregirRespuesta}
