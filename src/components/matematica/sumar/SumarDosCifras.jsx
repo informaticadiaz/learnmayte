@@ -117,15 +117,13 @@ export default function SumarDosCifras() {
               </div>
               <div className="bg-btn-dark p-4 rounded col-span-1">
                 <input
-                  
                   value={respuestaDecenas}
                   onChange={handleChangeDecenas}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
                 />
               </div>
               <div className="bg-btn-dark p-4 rounded col-span-1">
-                <input
-                  
+                <input    
                   value={respuestaUnidades}
                   onChange={handleChangeUnidades}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"

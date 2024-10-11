@@ -6,11 +6,15 @@ import Sociales from '../pages/Sociales';
 import Naturales from '../pages/Naturales';
 import Tarea from '../pages/Tarea';
 import Dictionary from '../components/Dictionary';
-// components
+// components sumar
 import SumarUnaCifra from '../components/matematica/sumar/SumarUnaCifra';
 import SumarDosCifras from '../components/matematica/sumar/SumarDosCifras';
 import SumarTresCifras from '../components/matematica/sumar/SumarTresCifras';
 import Cursiva from '../components/Cursiva';
+// componentes restar
+import RestarUnaCifra from '../components/matematica/restar/RestarUnaCifra';
+// componentes multiplicar
+import Tablas from '../components/matematica/multiplicar/Tablas';
 // error
 import ErrorPage from '../error-page';
 
@@ -41,6 +45,14 @@ const routes = [
       {
         path: "/sumar/tres-cifras",
         element: <SumarTresCifras />,
+      },
+      {
+        path: "/restar/una-cifra",
+        element: <RestarUnaCifra />,
+      },
+      {
+        path: "/multiplicar/tablas",
+        element: <Tablas />,
       },
       {
         path: "/lengua",

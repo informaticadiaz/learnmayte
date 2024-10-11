@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TablaMultiplicar from '../multiplicar/TablaMultiplicar';
+import TablaMultiplicar from './TablaMultiplicar';
 
 function App() {
   const [numeroTabla, setNumeroTabla] = useState(1); // Tabla seleccionada
