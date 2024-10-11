@@ -27,6 +27,12 @@ function TablaMultiplicar({ numeroTabla }) {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      corregirRespuesta();
+    }
+  };
+
   const darSugerencia = () => {
     setMensaje(`La respuesta correcta es: ${numeroTabla * indice}`);
   };
@@ -53,6 +59,7 @@ function TablaMultiplicar({ numeroTabla }) {
                 type="number"
                 value={respuesta}
                 onChange={(e) => setRespuesta(e.target.value)}
+                onKeyDown={handleKeyDown} // Maneja el evento de presionar Enter
                 className="w-10 sm:w-20 rounded flex text-black text-center text-4xl sm:text-4xl"
               />
             </div>
