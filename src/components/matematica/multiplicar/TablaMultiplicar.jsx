@@ -45,7 +45,7 @@ function TablaMultiplicar({ numeroTabla }) {
       {/* Mostrar la próxima multiplicación si no se ha completado toda la tabla */}
       {indice <= 10 && (
         <>
-          <div className="grid grid-cols-3 gap-2 py-8 text-center text-2xl sm:text-2xl">
+          <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
             <p className="text-7xl">{numeroTabla} x {indice}</p>
             <p className="text-7xl">=</p>
             <div className="flex justify-center">
@@ -53,7 +53,7 @@ function TablaMultiplicar({ numeroTabla }) {
                 type="number"
                 value={respuesta}
                 onChange={(e) => setRespuesta(e.target.value)}
-                className="w-20 rounded flex text-black text-center text-6xl"
+                className="w-10 sm:w-20 rounded flex text-black text-center text-lgsm:text-2xl"
               />
             </div>
           </div>

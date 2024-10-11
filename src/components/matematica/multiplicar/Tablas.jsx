@@ -14,7 +14,7 @@ function App() {
       <h1 className="text-5xl text-center mb-8">Selecciona una tabla para evaluar</h1>
       
       {/* Botones para seleccionar la tabla */}
-      <div className="grid grid-cols-5 gap-4 mb-10">
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mb-10">
         {[...Array(10)].map((_, index) => (
           <button
             key={index + 1}
