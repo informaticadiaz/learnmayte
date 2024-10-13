@@ -99,8 +99,18 @@ function TablaMultiplicar({ numeroTabla }) {
 
       {/* Mensaje al finalizar la tabla */}
       {indice > 10 && (
+        <>
         <p className="text-lg sm:text-5xl text-center">¡Has completado la tabla del {numeroTabla}!</p>
-      )}
+        <button
+              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
+              onClick={scrollToTop}
+            >
+              Tablas
+            </button>
+        </>
+        
+      )      
+      }
     </div>
   );
 }
