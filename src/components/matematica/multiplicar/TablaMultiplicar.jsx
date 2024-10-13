@@ -37,8 +37,15 @@ function TablaMultiplicar({ numeroTabla }) {
     setMensaje(`La respuesta correcta es: ${numeroTabla * indice}`);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,           // Posición vertical a la que se desplaza (0 es la parte superior)
+      behavior: 'smooth' // Desplazamiento suave
+    });
+  };
+
   return (
-    <div className="mt-8 bg-dark text-t-btn-light">
+    <div className="mt-8 bg-dark text-t-btn-light h-screen">
       <h1 className="text-5xl text-center">Tabla del {numeroTabla}</h1>
 
       {/* Mostrar tabla ya resuelta */}
@@ -64,18 +71,25 @@ function TablaMultiplicar({ numeroTabla }) {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2 py-8 text-center text-lg sm:text-2xl">
+          <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
             <button
               className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
-              onClick={corregirRespuesta}
+              onClick={scrollToTop}
             >
-              Corregir
+              Tablas
             </button>
             <button
               className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
               onClick={darSugerencia}
             >
               Sugerir
+            </button>
+            
+            <button
+              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
+              onClick={corregirRespuesta}
+            >
+              Corregir
             </button>
           </div>
           <p className="text-lg sm:text-5xl text-center">{mensaje}</p>
