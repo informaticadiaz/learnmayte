@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 function TablaMultiplicar({ numeroTabla }) {
   const [indice, setIndice] = useState(1); // Para controlar la multiplicación actual (ej. 4x1, 4x2, etc.)
   const [respuesta, setRespuesta] = useState(''); // Para almacenar la respuesta del input
