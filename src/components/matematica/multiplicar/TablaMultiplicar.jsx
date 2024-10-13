@@ -15,6 +15,13 @@ function TablaMultiplicar({ numeroTabla }) {
     setTablaResuelta([]);
   }, [numeroTabla]);
 
+  const scrollByPixels = (px) => {
+    window.scrollBy({
+      top: px,        // Cantidad de píxeles para desplazar verticalmente
+      behavior: 'smooth'  // Desplazamiento suave
+    });
+  };
+
   const corregirRespuesta = () => {
     const respuestaCorrecta = numeroTabla * indice;
     if (parseInt(respuesta) === respuestaCorrecta) {
@@ -23,6 +30,8 @@ function TablaMultiplicar({ numeroTabla }) {
       setIndice(indice + 1); // Avanzar al siguiente multiplicador
       setRespuesta(''); // Limpiar el input
       setMensaje('');
+      // Desplazar hacia abajo 100px al corregir la respuesta
+    scrollByPixels(20);
     } else {
       setMensaje('Incorrecto, intenta de nuevo');
     }
@@ -46,7 +55,7 @@ function TablaMultiplicar({ numeroTabla }) {
   };
 
   return (
-    <div className="mt-8 bg-dark text-t-btn-light h-screen">
+    <div className="mt-8 bg-dark text-t-btn-light h-[130vh]">
       <h1 className="text-5xl text-center">Tabla del {numeroTabla}</h1>
 
       {/* Mostrar tabla ya resuelta */}
