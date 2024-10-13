@@ -4,14 +4,15 @@ import will from '@/assets/walltransparente.webp';
 
 function App() {
   const [numeroTabla, setNumeroTabla] = useState(1); // Tabla seleccionada
-  const targetSectionRef = useRef(null);
+  const sectionTabla = useRef(null);
+  
   
 
 
   // Función para seleccionar la tabla
   const seleccionarTabla = (numero) => {
     setNumeroTabla(numero);
-    targetSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    sectionTabla.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -33,11 +34,11 @@ function App() {
         </div>
         
       {/* Imagen de Will */}
-      <img src={will} alt="will" className="w-80 h-80 mt-20 mx-auto" />
+      <img src={will} alt="will" className="w-80 h-80 sm:mt-20 mx-auto" />
       </div>
 
       {/* Componente que muestra la tabla seleccionada */}
-      <div ref={targetSectionRef} >
+      <div ref={sectionTabla} >
         
 
       </div>
