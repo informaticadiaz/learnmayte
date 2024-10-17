@@ -67,8 +67,8 @@ const MathStepByStep = () => {
       <h1 className='text-4xl text-t-btn-light text-center p-8'>Práctica de Matemática</h1>
       {/* Me llevo */}
       <div className="grid grid-cols-5 gap-4 text-center text-xl sm:text-xl">
-      <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+      <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
         {/*<label>Lleva centena: </label>*/}
         <input
           type="number"
@@ -80,7 +80,7 @@ const MathStepByStep = () => {
           className="text-4xl font-bold w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
         />
         </div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
         {/*<label>Lleva decena: </label>*/}
         <input
           type="number"
@@ -92,7 +92,7 @@ const MathStepByStep = () => {
           className="text-4xl font-bold w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
         />
         </div>    
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
         {/*<label>Lleva unidad: </label>*/}
         <input
           type="number"
@@ -121,18 +121,18 @@ const MathStepByStep = () => {
           {unitsDigit}
         </div>
         
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'>x</div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'>x</div>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'></div>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light'>
          {randomNumber1}
         </div>
       </div>
       <hr className="my-2 border-yellow-200 border-2" />
       {/* Resultado */}
       <div className='grid grid-cols-5 gap-4 text-center text-xl sm:text-2xl'>
-      <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+      <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
         {/*<label>Lleva miles: </label>*/}
         <input
           type="number"
@@ -144,7 +144,7 @@ const MathStepByStep = () => {
           className="text-4xl font-bold w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
         />
         </div>
-          <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+          <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
             {/*<label>Miles: </label>*/}
             <input
               type="number"
@@ -154,7 +154,7 @@ const MathStepByStep = () => {
               className="text-4xl font-bold w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
             />
           </div>
-          <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+          <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
             {/*<label>Centenas: </label>*/}
             <input
               type="number"
@@ -164,7 +164,7 @@ const MathStepByStep = () => {
               className="text-4xl font-bold w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
             />
           </div>
-          <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+          <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
           {/*<label>Decenas: </label>*/}
           <input
             type="number"
@@ -174,7 +174,7 @@ const MathStepByStep = () => {
             className="text-4xl font-bold w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
           />
         </div>
-        <div className='bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
+        <div className='bg-btn-dark py-4 rounded col-span-1 row-span-2 flex flex-col justify-center'>
           {/*<label>Unidades: </label>*/}
           <input
             type="number"
