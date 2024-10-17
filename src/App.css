@@ -22,3 +22,7 @@ input[type=number] {
   font-family: 'cursiva';
   src: url('../public/cursiva.otf');
 }
+
+input {
+  color: black;
+}

@@ -4,7 +4,7 @@
   text-align: left;
   display: flex;
   align-items: center;
-  margin: 0 5px;
+ // margin: 0 5px;
 
   a {
     color: white;
@@ -35,11 +35,11 @@
 
       .label {
         font-weight: 500;
-        margin-left: 10px;
+        //margin-left: 10px;
         overflow: hidden;
       }
     }
-
+/*
     &:hover {
       background-color: #325ba8;
       color: white;
@@ -52,6 +52,7 @@
         animation-name: tooltip;
       }
     }
+*/      
   }
 
   .tooltip{

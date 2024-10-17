@@ -14,6 +14,8 @@ import Cursiva from '../components/Cursiva';
 // componentes restar
 import RestarUnaCifra from '../components/matematica/restar/RestarUnaCifra';
 // componentes multiplicar
+import MultiplicarX4 from '../components/matematica/multiplicar/MultiplicarX4';
+import Multiplicar from '../components/matematica/multiplicar/Multiplicar';
 import Tablas from '../components/matematica/multiplicar/Tablas';
 // error
 import ErrorPage from '../error-page';
@@ -53,6 +55,14 @@ const routes = [
       {
         path: "/multiplicar/tablas",
         element: <Tablas />,
+      },
+      {
+        path: "multiplicar/multiplicar",
+        element: <Multiplicar />
+      },
+      {
+        path: "multiplicar/cuatro-cifras",
+        element: <MultiplicarX4 />
       },
       {
         path: "/lengua",
