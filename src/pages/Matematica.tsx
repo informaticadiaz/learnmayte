@@ -84,9 +84,10 @@ export default function Matematica() {
         {/* Submenú de MULTIPLICAR */}
         {submenu === "multiplicar" && (
           <div className="grid grid-cols-3 gap-4">
-            <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
-              <Link to="/multiplicar/cuatro-cifras">Cuatro Cifras</Link>
-            </button>
+            <Link
+              to="/multiplicar/cuatro-cifras"
+              className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+              Cuatro Cifras</Link>
             <button
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
               onClick={() => setSubmenu("")} // Botón para volver al menú principal
