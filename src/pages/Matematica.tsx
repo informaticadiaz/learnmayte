@@ -69,9 +69,21 @@ export default function Matematica() {
         {/* Submenú de RESTAR (puedes agregar más opciones aquí) */}
         {submenu === "restar" && (
           <div className="grid grid-cols-3 gap-4">
-            <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
-              <Link to="/restar/una-cifra">Restar Una Cifra</Link>
-            </button>
+            <Link
+              to="/restar/una-cifra"
+              className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+              Restar Una Cifra
+            </Link>
+            <Link
+              to="/restar/dos-cifras"
+              className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+              Restar dos Cifras
+            </Link>
+            <Link
+              to="/restar/tres-cifras"
+              className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+              Restar tres Cifras
+            </Link>
             <button
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
               onClick={() => setSubmenu("")} // Botón para volver al menú principal

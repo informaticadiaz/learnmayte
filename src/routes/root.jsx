@@ -10,16 +10,18 @@ import Dictionary from '../components/Dictionary';
 import SumarUnaCifra from '../components/matematica/sumar/SumarUnaCifra';
 import SumarDosCifras from '../components/matematica/sumar/SumarDosCifras';
 import SumarTresCifras from '../components/matematica/sumar/SumarTresCifras';
-import Cursiva from '../components/Cursiva';
+
 // componentes restar
 import RestarUnaCifra from '../components/matematica/restar/RestarUnaCifra';
+import RestarDosCifras from '../components/matematica/restar/RestarDosCifras';
+import RestarTresCifras from '../components/matematica/restar/RestarTresCifras';
 // componentes multiplicar
 import MultiplicarX4 from '../components/matematica/multiplicar/MultiplicarX4';
 import Multiplicar from '../components/matematica/multiplicar/Multiplicar';
 import Tablas from '../components/matematica/multiplicar/Tablas';
 // error
 import ErrorPage from '../error-page';
-
+import Cursiva from '../components/Cursiva';
 import MainLayout from '../layout/MainLayout';
 
 const routes = [
@@ -51,6 +53,14 @@ const routes = [
       {
         path: "/restar/una-cifra",
         element: <RestarUnaCifra />,
+      },
+      {
+        path: "/restar/dos-cifras",
+        element: <RestarDosCifras />,
+      },
+      {
+        path: "/restar/tres-cifras",
+        element: <RestarTresCifras />,
       },
       {
         path: "/multiplicar/tablas",
