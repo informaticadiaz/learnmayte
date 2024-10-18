@@ -60,15 +60,15 @@ const RestarDosCifras = () => {
   };
 
   return (
-    <div className="p-20 text-7xl text-center">
-      <h3 className="text-6xl text-center my-8">Resta de dos cifras</h3>
+    <div className="p-20 sm:text-7xl text-center">
+      <h3 className="sm:text-6xl text-center my-8">Resta de dos cifras</h3>
       <div className="grid grid-cols-3 gap-4 mt-12">
         <div></div>
-        <div className="celda">
+        <div>
           {/* Mostrar la decena modificada si existe */}
           {decenaModificada !== null ? decenaModificada : numeros.minuendo.decena}
         </div>
-        <div className="celda">
+        <div>
           {/* Mostrar la unidad modificada si existe */}
           {unidadModificada !== null ? unidadModificada : numeros.minuendo.unidad}
           {necesitaPedirDecena && (
