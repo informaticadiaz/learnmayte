@@ -83,7 +83,7 @@ const RestarTresCifras = () => {
   };
 
   return (
-    <div className="p-20 sm:text-7xl">
+    <div className="p-20 text-xl sm:text-7xl">
       <h3>Resta de tres cifras</h3>
       <div className="m-4 grid grid-cols-4 gap-4">
         <div></div>
