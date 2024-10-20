@@ -61,7 +61,7 @@ const RestarDosCifras = () => {
   };
 
   return (
-    <div className="p-20 text-center text-xl sm:text-7xl">
+    <div className="p-20 text-center text-4xl sm:text-7xl">
       <h3 className="my-8 text-center sm:text-6xl">Resta de dos cifras</h3>
       <div className="mt-12 grid grid-cols-3 gap-4">
         <div></div>
