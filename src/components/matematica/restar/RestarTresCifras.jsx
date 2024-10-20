@@ -86,30 +86,31 @@ const RestarTresCifras = () => {
     <div className="p-20 sm:text-7xl">
       <h3>Resta de tres cifras</h3>
       <div className="grid grid-cols-4 gap-4 m-4">
-      <div></div>
-      <div></div>
-      {/* Botones para pedir decena o centena */}
-      <div>
-        {!pediDecena && numeros.minuendo.unidad < numeros.sustraendo.unidad && (
-          <button
-            onClick={handlePedirDecena}
-            className="bg-blue-500 text-white p-2 rounded m-2 text-xl"
-          >
-            Pedir Decena
-          </button>
-        )}
-      </div>
-      <div>
-      {!pediCentena && numeros.minuendo.decena < numeros.sustraendo.decena && (
-          <button
-            onClick={handlePedirCentena}
-            className="bg-blue-500 text-white p-2 rounded m-2 text-xl"
-          >
-            Pedir Centena
-          </button>
-        )}
-
-      </div>
+        <div></div>
+        <div></div>
+        {/* Botones para pedir decena o centena */}
+        <div>
+          {!pediDecena &&
+            numeros.minuendo.unidad < numeros.sustraendo.unidad && (
+              <button
+                onClick={handlePedirDecena}
+                className="bg-blue-500 text-white p-2 rounded m-2 text-xl"
+              >
+                Pedir Decena
+              </button>
+            )}
+        </div>
+        <div>
+          {!pediCentena &&
+            numeros.minuendo.decena < numeros.sustraendo.decena && (
+              <button
+                onClick={handlePedirCentena}
+                className="bg-blue-500 text-white p-2 rounded m-2 text-xl"
+              >
+                Pedir Centena
+              </button>
+            )}
+        </div>
       </div>
       <div className="grid grid-cols-4 gap-4 m-4">
         <div></div>
@@ -158,8 +159,6 @@ const RestarTresCifras = () => {
       </form>
       {acierto === true && <p>¡Correcto!</p>}
       {acierto === false && <p>Respuesta incorrecta. Intenta de nuevo.</p>}
-
-
 
       <div className="grid grid-cols-2 gap-4 mt-8">
         <Link

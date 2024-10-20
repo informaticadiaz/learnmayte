@@ -4,9 +4,6 @@ import profileImage from "../assets/logo.png";
 import { FcCalculator, FcGraduationCap, FcAddressBook } from "react-icons/fc";
 import { Outlet } from "react-router-dom";
 
-
-
-
 const MainLayout = () => {
   const items: SideBarMenuItem[] = [
     {
@@ -44,7 +41,7 @@ const MainLayout = () => {
       label: "DICCIONARIO",
       icon: FcAddressBook,
       url: "/diccionario",
-    }
+    },
   ];
 
   const card: SideBarMenuCard = {
@@ -58,7 +55,9 @@ const MainLayout = () => {
   return (
     <div>
       <SideBarMenu items={items} card={card} />
-      <main><Outlet /></main>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

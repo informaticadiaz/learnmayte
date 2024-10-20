@@ -49,7 +49,8 @@ const RestarDosCifras = () => {
   };
 
   // Función para determinar si es necesario pedir una decena
-  const necesitaPedirDecena = numeros.minuendo.unidad < numeros.sustraendo.unidad;
+  const necesitaPedirDecena =
+    numeros.minuendo.unidad < numeros.sustraendo.unidad;
 
   // Función para quitar una decena y transferirla a la unidad
   const pedirDecena = () => {
@@ -66,11 +67,15 @@ const RestarDosCifras = () => {
         <div></div>
         <div>
           {/* Mostrar la decena modificada si existe */}
-          {decenaModificada !== null ? decenaModificada : numeros.minuendo.decena}
+          {decenaModificada !== null
+            ? decenaModificada
+            : numeros.minuendo.decena}
         </div>
         <div>
           {/* Mostrar la unidad modificada si existe */}
-          {unidadModificada !== null ? unidadModificada : numeros.minuendo.unidad}
+          {unidadModificada !== null
+            ? unidadModificada
+            : numeros.minuendo.unidad}
           {necesitaPedirDecena && (
             <div>
               <button
@@ -98,7 +103,6 @@ const RestarDosCifras = () => {
       </div>
       <div className="my-8 border m-auto"></div>
       <form onSubmit={handleSubmit}>
-
         <div className="grid grid-cols-3 gap-4 place-items-center">
           <div></div>
 
@@ -118,7 +122,11 @@ const RestarDosCifras = () => {
         </div>
 
         {acierto === true && <p className="text-2xl mt-8">¡Correcto!</p>}
-        {acierto === false && <p className="text-2xl mt-8">Respuesta incorrecta. Intenta de nuevo.</p>}
+        {acierto === false && (
+          <p className="text-2xl mt-8">
+            Respuesta incorrecta. Intenta de nuevo.
+          </p>
+        )}
 
         <button
           type="submit"
@@ -126,14 +134,13 @@ const RestarDosCifras = () => {
         >
           Comprobar
         </button>
-
       </form>
 
       <div className="grid grid-cols-2 gap-4 mt-8">
-
         <Link
           to="/matematica"
-          className="w-full bg-purple-500 hover:bg-purple-700 text-white font-bold text-xl p-2 rounded">
+          className="w-full bg-purple-500 hover:bg-purple-700 text-white font-bold text-xl p-2 rounded"
+        >
           Volver
         </Link>
 
@@ -143,9 +150,7 @@ const RestarDosCifras = () => {
         >
           Nueva Cuenta
         </button>
-
       </div>
-
     </div>
   );
 };

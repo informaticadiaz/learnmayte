@@ -5,8 +5,7 @@ import { useState } from "react";
 import { classNames } from "../../util/classes";
 import { VscMenu } from "react-icons/vsc";
 
-import './SideBarMenu.scss';
-
+import "./SideBarMenu.scss";
 
 interface SideBarMenuProps {
   items: SideBarMenuItem[];
@@ -27,7 +26,8 @@ function SideBarMenu({ items, card }: SideBarMenuProps) {
           <VscMenu />
         </button>
       </div>
-      <div className={classNames('SideBarMenu', isOpen ? 'expanded' : 'collapsed')}
+      <div
+        className={classNames("SideBarMenu", isOpen ? "expanded" : "collapsed")}
       >
         <SideBarMenuCardView card={card} isOpen={isOpen} />
         {items.map((item) => (
@@ -35,7 +35,7 @@ function SideBarMenu({ items, card }: SideBarMenuProps) {
         ))}
       </div>
     </>
-  )
+  );
 }
 
-export default SideBarMenu
+export default SideBarMenu;

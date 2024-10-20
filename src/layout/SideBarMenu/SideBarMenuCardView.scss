@@ -1,4 +1,4 @@
-@import './commons.scss';
+@import "./commons.scss";
 
 .SideBarMenuCardView {
   text-align: center;
@@ -14,11 +14,11 @@
     overflow: hidden;
     height: 80px;
     @include transition(height);
-    
+
     &.collapsed {
-      opacity: 0; 
+      opacity: 0;
       height: 0;
-    }   
+    }
 
     .name {
       font-size: 20px;
@@ -35,5 +35,4 @@
       }
     }
   }
-
-} 
+}

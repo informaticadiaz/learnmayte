@@ -1,28 +1,28 @@
-import App from '../App';
+import App from "../App";
 // pages
-import Matematica from '../pages/Matematica';
-import Lengua from '../pages/Lengua';
-import Sociales from '../pages/Sociales';
-import Naturales from '../pages/Naturales';
-import Tarea from '../pages/Tarea';
-import Dictionary from '../components/Dictionary';
+import Matematica from "../pages/Matematica";
+import Lengua from "../pages/Lengua";
+import Sociales from "../pages/Sociales";
+import Naturales from "../pages/Naturales";
+import Tarea from "../pages/Tarea";
+import Dictionary from "../components/Dictionary";
 // components sumar
-import SumarUnaCifra from '../components/matematica/sumar/SumarUnaCifra';
-import SumarDosCifras from '../components/matematica/sumar/SumarDosCifras';
-import SumarTresCifras from '../components/matematica/sumar/SumarTresCifras';
+import SumarUnaCifra from "../components/matematica/sumar/SumarUnaCifra";
+import SumarDosCifras from "../components/matematica/sumar/SumarDosCifras";
+import SumarTresCifras from "../components/matematica/sumar/SumarTresCifras";
 
 // componentes restar
-import RestarUnaCifra from '../components/matematica/restar/RestarUnaCifra';
-import RestarDosCifras from '../components/matematica/restar/RestarDosCifras';
-import RestarTresCifras from '../components/matematica/restar/RestarTresCifras';
+import RestarUnaCifra from "../components/matematica/restar/RestarUnaCifra";
+import RestarDosCifras from "../components/matematica/restar/RestarDosCifras";
+import RestarTresCifras from "../components/matematica/restar/RestarTresCifras";
 // componentes multiplicar
-import MultiplicarX4 from '../components/matematica/multiplicar/MultiplicarX4';
-import Multiplicar from '../components/matematica/multiplicar/Multiplicar';
-import Tablas from '../components/matematica/multiplicar/Tablas';
+import MultiplicarX4 from "../components/matematica/multiplicar/MultiplicarX4";
+import Multiplicar from "../components/matematica/multiplicar/Multiplicar";
+import Tablas from "../components/matematica/multiplicar/Tablas";
 // error
-import ErrorPage from '../error-page';
-import Cursiva from '../components/Cursiva';
-import MainLayout from '../layout/MainLayout';
+import ErrorPage from "../error-page";
+import Cursiva from "../components/Cursiva";
+import MainLayout from "../layout/MainLayout";
 
 const routes = [
   {
@@ -68,11 +68,11 @@ const routes = [
       },
       {
         path: "multiplicar/multiplicar",
-        element: <Multiplicar />
+        element: <Multiplicar />,
       },
       {
         path: "multiplicar/cuatro-cifras",
-        element: <MultiplicarX4 />
+        element: <MultiplicarX4 />,
       },
       {
         path: "/lengua",
@@ -100,7 +100,6 @@ const routes = [
       },
     ],
   },
-  
-]
+];
 
-export default routes
+export default routes;

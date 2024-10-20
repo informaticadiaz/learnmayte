@@ -3,13 +3,13 @@ body {
   background-color: #001c32;
 }
 
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -17,10 +17,9 @@ input[type=number] {
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'cursiva';
-  src: url('../public/cursiva.otf');
+  font-family: "cursiva";
+  src: url("../public/cursiva.otf");
 }
 
 input {

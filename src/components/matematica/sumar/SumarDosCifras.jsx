@@ -44,7 +44,10 @@ export default function SumarDosCifras() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const centenasCorrectas = resultadoCentenas === 0 ? respuestaCentena === '' : parseInt(respuestaCentena) === resultadoCentenas;
+    const centenasCorrectas =
+      resultadoCentenas === 0
+        ? respuestaCentena === ""
+        : parseInt(respuestaCentena) === resultadoCentenas;
     if (
       parseInt(respuestaUnidades) === resultadoUnidades &&
       parseInt(respuestaDecenas) === resultadoDecenas &&
@@ -68,10 +71,10 @@ export default function SumarDosCifras() {
     } else {
       // Hace que el mensaje desaparezca después de 10 segundos (10000 milisegundos)
       setTimeout(() => {
-        setMensaje(''); // Limpia el mensaje después de 10 segundos
-        setRespuestaCentena('');
-        setRespuestaDecenas('');
-        setRespuestaUnidades('');
+        setMensaje(""); // Limpia el mensaje después de 10 segundos
+        setRespuestaCentena("");
+        setRespuestaDecenas("");
+        setRespuestaUnidades("");
         setNum1(Math.floor(Math.random() * 90) + 10);
         setNum2(Math.floor(Math.random() * 90) + 10);
       }, 2000);
@@ -105,11 +108,10 @@ export default function SumarDosCifras() {
           </div>
           <hr className="my-2 border-yellow-200 border-2" />
           {/* input respuesta */}
-          <form onSubmit={handleSubmit} >
+          <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-3 gap-2 text-4xl text-center mt-2">
               <div className="bg-btn-dark p-4 rounded col-span-1">
                 <input
-                  
                   value={respuestaCentena}
                   onChange={handleChangeCentenas}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
@@ -123,7 +125,7 @@ export default function SumarDosCifras() {
                 />
               </div>
               <div className="bg-btn-dark p-4 rounded col-span-1">
-                <input    
+                <input
                   value={respuestaUnidades}
                   onChange={handleChangeUnidades}
                   className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
@@ -138,19 +140,34 @@ export default function SumarDosCifras() {
             </button>
           </form>
 
-          <p className="mt-4 text-t-btn-light text-4xl text-center">{mensaje}</p>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">los aciertos son {aciertos}</p>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">los errores son {errores}</p>
+          <p className="mt-4 text-t-btn-light text-4xl text-center">
+            {mensaje}
+          </p>
+          <p className="mt-4 text-t-btn-light text-4xl text-center">
+            los aciertos son {aciertos}
+          </p>
+          <p className="mt-4 text-t-btn-light text-4xl text-center">
+            los errores son {errores}
+          </p>
         </div>
       ) : (
         <div className="p-10 sm:p-20 bg-dark h-screen">
           {/* Aquí va lo que se mostrará cuando la calculadora desaparezca */}
-          <h1 className="mt-4 text-t-btn-light text-7xl text-center">{mensaje}</h1>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">los aciertos son {aciertos}</p>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">los errores son {errores}</p>
+          <h1 className="mt-4 text-t-btn-light text-7xl text-center">
+            {mensaje}
+          </h1>
+          <p className="mt-4 text-t-btn-light text-4xl text-center">
+            los aciertos son {aciertos}
+          </p>
+          <p className="mt-4 text-t-btn-light text-4xl text-center">
+            los errores son {errores}
+          </p>
           <button
             className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-4"
-            onClick={() => window.location.reload()}>Reiniciar</button>
+            onClick={() => window.location.reload()}
+          >
+            Reiniciar
+          </button>
         </div>
       )}
     </div>

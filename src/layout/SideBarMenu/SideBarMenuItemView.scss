@@ -1,10 +1,10 @@
-@import './commons.scss';
+@import "./commons.scss";
 
 .SideBarMenuItem {
   text-align: left;
   display: flex;
   align-items: center;
- // margin: 0 5px;
+  // margin: 0 5px;
 
   a {
     color: white;
@@ -15,7 +15,6 @@
     border-radius: 5px;
 
     .ItemContent {
-
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -39,7 +38,7 @@
         overflow: hidden;
       }
     }
-/*
+    /*
     &:hover {
       background-color: #325ba8;
       color: white;
@@ -52,10 +51,10 @@
         animation-name: tooltip;
       }
     }
-*/      
+*/
   }
 
-  .tooltip{
+  .tooltip {
     position: absolute;
     background-color: black;
     left: 70px;

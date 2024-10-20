@@ -1,13 +1,11 @@
-@import './commons.scss';
-
+@import "./commons.scss";
 
 .menuButton {
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 2;
-  
-  
+
   .hamburgerIcon {
     cursor: pointer;
     border: none;

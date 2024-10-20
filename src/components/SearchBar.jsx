@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import { TextField, Button, List, ListItem } from '@mui/material'
+import React, { useState } from "react";
+import { TextField, Button, List, ListItem } from "@mui/material";
 
 const SearchBar = ({ onSearch, dictionary }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
-  
+
     // Filter suggestions based on the input value
-    const filteredSuggestions = dictionary.filter(word =>
-      word.toLowerCase().startsWith(value.toLowerCase())
+    const filteredSuggestions = dictionary.filter((word) =>
+      word.toLowerCase().startsWith(value.toLowerCase()),
     );
-  
-    if (value === '') { // Check if input value is empty
+
+    if (value === "") {
+      // Check if input value is empty
       setSuggestions([]); // Clear suggestions when input is empty
     } else {
       setSuggestions(filteredSuggestions);
@@ -22,7 +23,8 @@ const SearchBar = ({ onSearch, dictionary }) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter' && inputValue.trim()) { // Check if Enter is pressed and input is not empty
+    if (event.key === "Enter" && inputValue.trim()) {
+      // Check if Enter is pressed and input is not empty
       handleSearch();
     }
   };
@@ -36,36 +38,40 @@ const SearchBar = ({ onSearch, dictionary }) => {
     onSearch(suggestion);
     setSuggestions([]);
   };
-  
 
   return (
-    <div className='flex flex-col items-center p-4 md:p-8 bg:gray-100 text-slate-200'>
-    <TextField 
-      label="Buscar palabra..." 
-      value={inputValue} 
-        onChange={handleInputChange} 
+    <div className="flex flex-col items-center p-4 md:p-8 bg:gray-100 text-slate-200">
+      <TextField
+        label="Buscar palabra..."
+        value={inputValue}
+        onChange={handleInputChange}
         onKeyDown={handleKeyDown}
-      variant="outlined" 
-        fullWidth 
+        variant="outlined"
+        fullWidth
         InputLabelProps={{
-          style: { zIndex: 0, color: 'blue' },
+          style: { zIndex: 0, color: "blue" },
         }}
         InputProps={{
-          style: { color: 'blue' },}}
-    />
-    <div className='mt-4'>
-    <Button variant="contained" color="primary" onClick={handleSearch}>
-      Buscar
-    </Button>
+          style: { color: "blue" },
+        }}
+      />
+      <div className="mt-4">
+        <Button variant="contained" color="primary" onClick={handleSearch}>
+          Buscar
+        </Button>
+      </div>
+      <List>
+        {suggestions.map((suggestion, index) => (
+          <ListItem
+            button
+            key={index}
+            onClick={() => handleSuggestionClick(suggestion)}
+          >
+            {suggestion}
+          </ListItem>
+        ))}
+      </List>
     </div>
-    <List>
-      {suggestions.map((suggestion, index) => (
-        <ListItem button key={index} onClick={() => handleSuggestionClick(suggestion)}>
-          {suggestion}
-        </ListItem>
-      ))}
-    </List>
-  </div>
   );
 };
 

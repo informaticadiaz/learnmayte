@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import TablaMultiplicar from '../multiplicar/TablaMultiplicar';
+import React, { useState } from "react";
+import TablaMultiplicar from "../multiplicar/TablaMultiplicar";
 
 function App() {
   const [numeroTabla, setNumeroTabla] = useState(1); // Tabla seleccionada
@@ -11,8 +11,10 @@ function App() {
 
   return (
     <div className="p-10 sm:p-20 bg-dark h-screen text-t-btn-light">
-      <h1 className="text-5xl text-center mb-8">Selecciona una tabla para evaluar</h1>
-      
+      <h1 className="text-5xl text-center mb-8">
+        Selecciona una tabla para evaluar
+      </h1>
+
       {/* Botones para seleccionar la tabla */}
       <div className="grid grid-cols-5 gap-4 mb-10">
         {[...Array(10)].map((_, index) => (
@@ -20,7 +22,7 @@ function App() {
             key={index + 1}
             onClick={() => seleccionarTabla(index + 1)}
             className={`bg-blue-800 text-slate-100 text-xl rounded p-4 ${
-              numeroTabla === index + 1 ? 'bg-green-600' : ''
+              numeroTabla === index + 1 ? "bg-green-600" : ""
             }`}
           >
             Tabla del {index + 1}
