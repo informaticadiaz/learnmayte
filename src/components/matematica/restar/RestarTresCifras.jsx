@@ -86,7 +86,17 @@ const RestarTresCifras = () => {
     <div className="p-20 text-4xl sm:text-7xl">
       <h3>Resta de tres cifras</h3>
       <div className="m-4 grid grid-cols-4 gap-4">
-        <div></div>
+      <div>
+          {!pediCentena &&
+            numeros.minuendo.decena < numeros.sustraendo.decena && (
+              <button
+                onClick={handlePedirCentena}
+                className="m-2 rounded bg-blue-500 p-2 text-xl text-white"
+              >
+                Pedir Centena
+              </button>
+            )}
+        </div>
         <div></div>
         {/* Botones para pedir decena o centena */}
         <div>
@@ -100,17 +110,8 @@ const RestarTresCifras = () => {
               </button>
             )}
         </div>
-        <div>
-          {!pediCentena &&
-            numeros.minuendo.decena < numeros.sustraendo.decena && (
-              <button
-                onClick={handlePedirCentena}
-                className="m-2 rounded bg-blue-500 p-2 text-xl text-white"
-              >
-                Pedir Centena
-              </button>
-            )}
-        </div>
+        <div></div>
+        
       </div>
       <div className="m-4 grid grid-cols-4 gap-4">
         <div></div>
