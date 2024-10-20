@@ -29,6 +29,12 @@ export default function Matematica() {
             </button>
             <button
               className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+              onClick={() => handleButtonClick("contar")}
+            >
+              CONTAR
+            </button>
+            <button
+              className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
               onClick={() => handleButtonClick("multiplicar")}
             >
               MULTIPLICAR
@@ -92,6 +98,24 @@ export default function Matematica() {
             >
               Restar tres Cifras
             </Link>
+            <button
+              className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
+              onClick={() => setSubmenu("")} // Botón para volver al menú principal
+            >
+              Volver
+            </button>
+          </div>
+        )}
+
+        {submenu === "contar" && (
+          <div className="grid grid-cols-3 gap-4">
+            <Link
+              to="/incrementar/incremento"
+              className="rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700"
+            >
+              Restar Una Cifra
+            </Link>
+            
             <button
               className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
               onClick={() => setSubmenu("")} // Botón para volver al menú principal

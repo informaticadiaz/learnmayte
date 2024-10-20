@@ -148,7 +148,7 @@ const EvaluacionMultiplicacion = () => {
   };
 
   return (
-    <div className="p-20 text-center">
+    <div className="p-10 sm:p-20 text-center">
       <h1 className="text-5xl">Evaluación de Multiplicación</h1>
       <p className="p-8 text-4xl">
         {numero} x {multiplicador}

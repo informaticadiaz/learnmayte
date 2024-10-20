@@ -6,11 +6,12 @@ import Sociales from "../pages/Sociales";
 import Naturales from "../pages/Naturales";
 import Tarea from "../pages/Tarea";
 import Dictionary from "../components/Dictionary";
+// Incrementar
+import Incremento110 from "../components/matematica/incremento/Incremento110";
 // components sumar
 import SumarUnaCifra from "../components/matematica/sumar/SumarUnaCifra";
 import SumarDosCifras from "../components/matematica/sumar/SumarDosCifras";
 import SumarTresCifras from "../components/matematica/sumar/SumarTresCifras";
-
 // componentes restar
 import RestarUnaCifra from "../components/matematica/restar/RestarUnaCifra";
 import RestarDosCifras from "../components/matematica/restar/RestarDosCifras";
@@ -34,10 +35,12 @@ const routes = [
         path: "/",
         element: <App />,
       },
+      // *-* Matematica *-* //
       {
         path: "/matematica",
         element: <Matematica />,
       },
+      // *-* sumar *-* //
       {
         path: "/sumar/una-cifra",
         element: <SumarUnaCifra />,
@@ -50,6 +53,7 @@ const routes = [
         path: "/sumar/tres-cifras",
         element: <SumarTresCifras />,
       },
+      // *-* restar *-* //
       {
         path: "/restar/una-cifra",
         element: <RestarUnaCifra />,
@@ -62,6 +66,12 @@ const routes = [
         path: "/restar/tres-cifras",
         element: <RestarTresCifras />,
       },
+      // *-* incrementar *-* //
+      {
+        path: "/incrementar/incremento",
+        element: <Incremento110 />,
+      },
+      // *-* multiplicar *-* // 
       {
         path: "/multiplicar/tablas",
         element: <Tablas />,

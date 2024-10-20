@@ -1,7 +1,6 @@
-body {
-  color: white;
-  background-color: #001c32;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -13,10 +12,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
   font-family: "cursiva";
   src: url("../public/cursiva.otf");
@@ -24,4 +19,11 @@ input[type="number"] {
 
 input {
   color: black;
+}
+
+body {
+  color: white;
+  background-color: #001c32;
+  max-width: 1024px;
+  margin: 0 auto;
 }
