@@ -84,86 +84,86 @@ export default function SumarDosCifras() {
   return (
     <div>
       {mostrarCalculadora ? (
-        <div className="p-10 sm:p-20 bg-dark h-screen">
+        <div className="h-screen bg-dark p-10 sm:p-20">
           {/* suma */}
 
           <div className="grid grid-cols-3 gap-2 text-center text-4xl sm:text-7xl">
-            <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
-              <p className=" text-yellow-200">+</p>
+            <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
+              <p className="text-yellow-200">+</p>
             </div>
-            <div className="bg-btn-dark p-4 rounded col-span-1 text-t-btn-light">
+            <div className="col-span-1 rounded bg-btn-dark p-4 text-t-btn-light">
               <p>{d1}</p>
             </div>
-            <div className="bg-btn-dark p-4 rounded col-span-1 text-t-btn-light">
+            <div className="col-span-1 rounded bg-btn-dark p-4 text-t-btn-light">
               <p>{u1}</p>
             </div>
-            <div className="bg-btn-dark p-4 rounded col-span-1 row-span-1 text-t-btn-light">
+            <div className="col-span-1 row-span-1 rounded bg-btn-dark p-4 text-t-btn-light">
               <p>{d2}</p>
             </div>
             <div>
-              <div className="bg-btn-dark p-4 rounded col-span-1 text-t-btn-light">
+              <div className="col-span-1 rounded bg-btn-dark p-4 text-t-btn-light">
                 <p>{u2}</p>
               </div>
             </div>
           </div>
-          <hr className="my-2 border-yellow-200 border-2" />
+          <hr className="my-2 border-2 border-yellow-200" />
           {/* input respuesta */}
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-3 gap-2 text-4xl text-center mt-2">
-              <div className="bg-btn-dark p-4 rounded col-span-1">
+            <div className="mt-2 grid grid-cols-3 gap-2 text-center text-4xl">
+              <div className="col-span-1 rounded bg-btn-dark p-4">
                 <input
                   value={respuestaCentena}
                   onChange={handleChangeCentenas}
-                  className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
+                  className="w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
                 />
               </div>
-              <div className="bg-btn-dark p-4 rounded col-span-1">
+              <div className="col-span-1 rounded bg-btn-dark p-4">
                 <input
                   value={respuestaDecenas}
                   onChange={handleChangeDecenas}
-                  className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
+                  className="w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
                 />
               </div>
-              <div className="bg-btn-dark p-4 rounded col-span-1">
+              <div className="col-span-1 rounded bg-btn-dark p-4">
                 <input
                   value={respuestaUnidades}
                   onChange={handleChangeUnidades}
-                  className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center"
+                  className="w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
                 />
               </div>
             </div>
             <button
-              className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
+              className="m-auto mt-2 w-full rounded bg-blue-800 p-2 text-xl text-slate-100"
               type="submit"
             >
               CORREGIR
             </button>
           </form>
 
-          <p className="mt-4 text-t-btn-light text-4xl text-center">
+          <p className="mt-4 text-center text-4xl text-t-btn-light">
             {mensaje}
           </p>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">
+          <p className="mt-4 text-center text-4xl text-t-btn-light">
             los aciertos son {aciertos}
           </p>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">
+          <p className="mt-4 text-center text-4xl text-t-btn-light">
             los errores son {errores}
           </p>
         </div>
       ) : (
-        <div className="p-10 sm:p-20 bg-dark h-screen">
+        <div className="h-screen bg-dark p-10 sm:p-20">
           {/* Aquí va lo que se mostrará cuando la calculadora desaparezca */}
-          <h1 className="mt-4 text-t-btn-light text-7xl text-center">
+          <h1 className="mt-4 text-center text-7xl text-t-btn-light">
             {mensaje}
           </h1>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">
+          <p className="mt-4 text-center text-4xl text-t-btn-light">
             los aciertos son {aciertos}
           </p>
-          <p className="mt-4 text-t-btn-light text-4xl text-center">
+          <p className="mt-4 text-center text-4xl text-t-btn-light">
             los errores son {errores}
           </p>
           <button
-            className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-4"
+            className="m-auto mt-4 w-full rounded bg-blue-800 p-2 text-xl text-slate-100"
             onClick={() => window.location.reload()}
           >
             Reiniciar

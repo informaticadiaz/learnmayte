@@ -430,10 +430,10 @@ const Dictionary = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-4 md:p-8 bg-dark min-h-screen">
+    <div className="flex min-h-screen flex-col items-center bg-dark p-4 md:p-8">
       <SearchBar onSearch={handleSearch} dictionary={Object.keys(dictionary)} />
-      <div className="mt-6 w-full bg-dark max-w-2xl text-t-dark p-6 rounded-lg shadow-md">
-        <h2 className="text-xl font-semibold bg-dark text-t-dark mb-4">
+      <div className="mt-6 w-full max-w-2xl rounded-lg bg-dark p-6 text-t-dark shadow-md">
+        <h2 className="mb-4 bg-dark text-xl font-semibold text-t-dark">
           Definición
         </h2>
         {searchTerm && <p>{definition}</p>}

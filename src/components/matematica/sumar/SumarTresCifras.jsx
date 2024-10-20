@@ -89,14 +89,14 @@ const MathStepByStep = () => {
   };
 
   return (
-    <div className="p-10 sm:p-20 bg-dark h-screen">
-      <h1 className="text-4xl text-t-btn-light text-center p-8">
+    <div className="h-screen bg-dark p-10 sm:p-20">
+      <h1 className="p-8 text-center text-4xl text-t-btn-light">
         Práctica de Matemática
       </h1>
       {/* Me llevo */}
       <div className="grid grid-cols-5 gap-4 text-center text-xl sm:text-xl">
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light"></div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light"></div>
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Lleva centena: </label>*/}
           <input
             type="number"
@@ -107,7 +107,7 @@ const MathStepByStep = () => {
             disabled={correctCarry3 === 0}
           />
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Lleva decena: </label>*/}
           <input
             type="number"
@@ -118,7 +118,7 @@ const MathStepByStep = () => {
             disabled={correctCarry2 === 0}
           />
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Lleva unidad: </label>*/}
           <input
             type="number"
@@ -132,34 +132,34 @@ const MathStepByStep = () => {
       </div>
       {/* Cuenta */}
       <div className="mt-4 grid grid-cols-5 gap-4 text-center text-4xl sm:text-7xl">
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light"></div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light"></div>
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light">
           {thousandsDigit}
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light">
           {hundredsDigit}
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light">
           {tensDigit}
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light">
           {unitsDigit}
         </div>
 
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light">
           x
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light"></div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light"></div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light"></div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center text-t-btn-light">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light"></div>
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light"></div>
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light"></div>
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4 text-t-btn-light">
           {randomNumber1}
         </div>
       </div>
-      <hr className="my-2 border-yellow-200 border-2" />
+      <hr className="my-2 border-2 border-yellow-200" />
       {/* Resultado */}
       <div className="grid grid-cols-5 gap-4 text-center text-xl sm:text-2xl">
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Lleva miles: </label>*/}
           <input
             type="number"
@@ -170,58 +170,58 @@ const MathStepByStep = () => {
             disabled={correctCarry4 === 0}
           />
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Miles: </label>*/}
           <input
             type="number"
             name="thousands"
             value={userInput.thousands}
             onChange={handleChange}
-            className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
+            className="m-auto w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
           />
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Centenas: </label>*/}
           <input
             type="number"
             name="hundreds"
             value={userInput.hundreds}
             onChange={handleChange}
-            className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
+            className="m-auto w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
           />
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Decenas: </label>*/}
           <input
             type="number"
             name="tens"
             value={userInput.tens}
             onChange={handleChange}
-            className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
+            className="m-auto w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
           />
         </div>
-        <div className="bg-btn-dark p-4 rounded col-span-1 row-span-2 flex flex-col justify-center">
+        <div className="col-span-1 row-span-2 flex flex-col justify-center rounded bg-btn-dark p-4">
           {/*<label>Unidades: </label>*/}
           <input
             type="number"
             name="units"
             value={userInput.units}
             onChange={handleChange}
-            className="w-12 sm:w-20 sm:px-2 sm:py-4 sm:my-4 text-center m-auto"
+            className="m-auto w-12 text-center sm:my-4 sm:w-20 sm:px-2 sm:py-4"
           />
         </div>
       </div>
-      <p className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-4">
+      <p className="m-auto mt-4 w-full rounded bg-blue-800 p-2 text-xl text-slate-100">
         {feedback}
       </p>
       <button
-        className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-4"
+        className="m-auto mt-4 w-full rounded bg-blue-800 p-2 text-xl text-slate-100"
         onClick={handleCheck}
       >
         Verificar
       </button>
       <button
-        className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-4"
+        className="m-auto mt-4 w-full rounded bg-blue-800 p-2 text-xl text-slate-100"
         onClick={handleNewProblem}
       >
         Nueva Cuenta

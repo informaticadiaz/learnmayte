@@ -99,7 +99,7 @@ export default function SumarUnaCifra() {
   };
 
   return (
-    <div className="py-10 text-center bg-slate-900 h-screen">
+    <div className="h-screen bg-slate-900 py-10 text-center">
       {mensaje && <p className="py-8 text-2xl text-slate-200">{mensaje}</p>}
       <p id="numeros" className="text-6xl text-slate-200">
         {numeros}
@@ -108,7 +108,7 @@ export default function SumarUnaCifra() {
         <input
           type="number"
           id="respuesta"
-          className="border rounded p-2 m-4"
+          className="m-4 rounded border p-2"
           onKeyDown={handleKeyPress}
         />
       )}
@@ -117,23 +117,23 @@ export default function SumarUnaCifra() {
           onClick={() =>
             verificarSuma(parseInt(document.getElementById("respuesta").value))
           }
-          className="bg-blue-800 text-slate-100 text-xl rounded p-2 mt-2"
+          className="mt-2 rounded bg-blue-800 p-2 text-xl text-slate-100"
         >
           Verificar
         </button>
       )}
 
-      <div className="py-8 space-x-20 text-xl text-slate-200" id="resultados">
-        <span className="p-4 bg-green-800 rounded text-slate-100 font-black">
+      <div className="space-x-20 py-8 text-xl text-slate-200" id="resultados">
+        <span className="rounded bg-green-800 p-4 font-black text-slate-100">
           Aciertos: {aciertos}
         </span>
-        <span className="p-4 bg-red-800 rounded text-slate-100 font-black">
+        <span className="rounded bg-red-800 p-4 font-black text-slate-100">
           Errores: {errores}
         </span>
       </div>
       <button
         onClick={resetResultados}
-        className="bg-green-800 text-slate-100 font-black text-xl rounded p-4 mt-8"
+        className="mt-8 rounded bg-green-800 p-4 text-xl font-black text-slate-100"
       >
         JUEGA OTRA VEZ
       </button>

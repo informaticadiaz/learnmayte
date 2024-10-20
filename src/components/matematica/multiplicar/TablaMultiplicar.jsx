@@ -66,11 +66,11 @@ function TablaMultiplicar({ numeroTabla }) {
   }, [numeroTabla]);
 
   return (
-    <div className="mt-8 bg-dark text-t-btn-light h-[130vh]">
-      <h1 className="text-5xl text-center">Tabla del {numeroTabla}</h1>
+    <div className="mt-8 h-[130vh] bg-dark text-t-btn-light">
+      <h1 className="text-center text-5xl">Tabla del {numeroTabla}</h1>
 
       {/* Mostrar tabla ya resuelta */}
-      <div className="text-3xl text-center my-4">
+      <div className="my-4 text-center text-3xl">
         {tablaResuelta.map((linea, idx) => (
           <p key={idx}>{linea}</p>
         ))}
@@ -90,46 +90,46 @@ function TablaMultiplicar({ numeroTabla }) {
                 value={respuesta}
                 onChange={(e) => setRespuesta(e.target.value)}
                 onKeyDown={handleKeyDown} // Maneja el evento de presionar Enter
-                className="w-10 sm:w-20 rounded flex text-black text-center text-4xl sm:text-4xl"
+                className="flex w-10 rounded text-center text-4xl text-black sm:w-20 sm:text-4xl"
               />
             </div>
           </div>
           <div className="grid grid-cols-3 gap-2 py-8 text-center text-lg sm:text-2xl">
             <button
-              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
+              className="m-auto mt-2 w-full rounded bg-blue-800 p-2 text-2xl text-slate-100"
               onClick={scrollToTop}
             >
               Tablas
             </button>
             <button
-              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
+              className="m-auto mt-2 w-full rounded bg-blue-800 p-2 text-2xl text-slate-100"
               onClick={darSugerencia}
             >
               Sugerir
             </button>
 
             <button
-              className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
+              className="m-auto mt-2 w-full rounded bg-blue-800 p-2 text-2xl text-slate-100"
               onClick={corregirRespuesta}
             >
               Corregir
             </button>
           </div>
-          <p className="text-lg sm:text-5xl text-center">{mensaje}</p>
+          <p className="text-center text-lg sm:text-5xl">{mensaje}</p>
         </>
       )}
 
       {/* Mensaje al finalizar la tabla */}
       {indice > 10 && (
         <>
-          <p className="text-lg sm:text-5xl text-center">
+          <p className="text-center text-lg sm:text-5xl">
             ¡Has completado la tabla del {numeroTabla}!
           </p>
-          <p className="text-lg sm:text-5xl text-center">
+          <p className="text-center text-lg sm:text-5xl">
             Aciertos: {aciertos}
           </p>
           <button
-            className="w-full m-auto bg-blue-800 text-slate-100 text-2xl rounded p-2 mt-2"
+            className="m-auto mt-2 w-full rounded bg-blue-800 p-2 text-2xl text-slate-100"
             onClick={scrollToTop}
           >
             Tablas

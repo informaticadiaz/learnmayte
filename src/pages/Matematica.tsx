@@ -10,32 +10,32 @@ export default function Matematica() {
   };
 
   return (
-    <div className="bg-dark text-center h-screen">
-      <div className="py-20 container mx-auto">
+    <div className="h-screen bg-dark text-center">
+      <div className="container mx-auto py-20">
         {/* Botones principales */}
         {submenu === "" && (
           <div className="grid grid-cols-3 gap-4">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
               onClick={() => handleButtonClick("sumar")}
             >
               SUMAR
             </button>
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
               onClick={() => handleButtonClick("restar")}
             >
               RESTAR
             </button>
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
               onClick={() => handleButtonClick("multiplicar")}
             >
               MULTIPLICAR
             </button>
             <Link
               to="/multiplicar/tablas"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
             >
               TABLAS
             </Link>
@@ -47,24 +47,24 @@ export default function Matematica() {
           <div className="grid grid-cols-3 gap-4">
             <Link
               to="/sumar/una-cifra"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
             >
               Sumar Una Cifra
             </Link>
             <Link
               to="/sumar/dos-cifras"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
             >
               Sumar Dos Cifras
             </Link>
             <Link
               to="/sumar/tres-cifras"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
             >
               Sumar Tres Cifras
             </Link>
             <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
               onClick={() => setSubmenu("")} // Botón para volver al menú principal
             >
               Volver
@@ -76,24 +76,24 @@ export default function Matematica() {
           <div className="grid grid-cols-3 gap-4">
             <Link
               to="/restar/una-cifra"
-              className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700"
             >
               Restar Una Cifra
             </Link>
             <Link
               to="/restar/dos-cifras"
-              className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700"
             >
               Restar dos Cifras
             </Link>
             <Link
               to="/restar/tres-cifras"
-              className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700"
             >
               Restar tres Cifras
             </Link>
             <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
               onClick={() => setSubmenu("")} // Botón para volver al menú principal
             >
               Volver
@@ -106,12 +106,12 @@ export default function Matematica() {
           <div className="grid grid-cols-3 gap-4">
             <Link
               to="/multiplicar/cuatro-cifras"
-              className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-purple-500 px-4 py-2 font-bold text-white hover:bg-purple-700"
             >
               Cuatro Cifras
             </Link>
             <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
               onClick={() => setSubmenu("")} // Botón para volver al menú principal
             >
               Volver

@@ -61,9 +61,9 @@ const RestarDosCifras = () => {
   };
 
   return (
-    <div className="p-20 sm:text-7xl text-center">
-      <h3 className="sm:text-6xl text-center my-8">Resta de dos cifras</h3>
-      <div className="grid grid-cols-3 gap-4 mt-12">
+    <div className="p-20 text-center sm:text-7xl">
+      <h3 className="my-8 text-center sm:text-6xl">Resta de dos cifras</h3>
+      <div className="mt-12 grid grid-cols-3 gap-4">
         <div></div>
         <div>
           {/* Mostrar la decena modificada si existe */}
@@ -79,7 +79,7 @@ const RestarDosCifras = () => {
           {necesitaPedirDecena && (
             <div>
               <button
-                className="ml-4 text-red-500 underline text-2xl"
+                className="ml-4 text-2xl text-red-500 underline"
                 onClick={pedirDecena}
               >
                 Pedir Decena
@@ -101,9 +101,9 @@ const RestarDosCifras = () => {
         <div>{numeros.sustraendo.unidad}</div>
         <div></div>
       </div>
-      <div className="my-8 border m-auto"></div>
+      <div className="m-auto my-8 border"></div>
       <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-3 gap-4 place-items-center">
+        <div className="grid grid-cols-3 place-items-center gap-4">
           <div></div>
 
           <input
@@ -121,32 +121,32 @@ const RestarDosCifras = () => {
           />
         </div>
 
-        {acierto === true && <p className="text-2xl mt-8">¡Correcto!</p>}
+        {acierto === true && <p className="mt-8 text-2xl">¡Correcto!</p>}
         {acierto === false && (
-          <p className="text-2xl mt-8">
+          <p className="mt-8 text-2xl">
             Respuesta incorrecta. Intenta de nuevo.
           </p>
         )}
 
         <button
           type="submit"
-          className="w-full m-auto bg-blue-800 text-slate-100 text-xl rounded p-2 mt-4"
+          className="m-auto mt-4 w-full rounded bg-blue-800 p-2 text-xl text-slate-100"
         >
           Comprobar
         </button>
       </form>
 
-      <div className="grid grid-cols-2 gap-4 mt-8">
+      <div className="mt-8 grid grid-cols-2 gap-4">
         <Link
           to="/matematica"
-          className="w-full bg-purple-500 hover:bg-purple-700 text-white font-bold text-xl p-2 rounded"
+          className="w-full rounded bg-purple-500 p-2 text-xl font-bold text-white hover:bg-purple-700"
         >
           Volver
         </Link>
 
         <button
           onClick={() => setNumeros(generarNumerosValidos())}
-          className="w-full bg-green-500 text-white p-2 text-xl rounded"
+          className="w-full rounded bg-green-500 p-2 text-xl text-white"
         >
           Nueva Cuenta
         </button>

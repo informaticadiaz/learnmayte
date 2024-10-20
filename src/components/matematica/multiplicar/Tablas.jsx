@@ -13,18 +13,18 @@ function App() {
   };
 
   return (
-    <div className="p-8 sm:p-20 bg-dark  text-t-btn-light">
+    <div className="bg-dark p-8 text-t-btn-light sm:p-20">
       <div className="h-screen">
-        <h1 className="text-5xl text-center mb-8">
+        <h1 className="mb-8 text-center text-5xl">
           Selecciona una tabla para evaluar
         </h1>
         {/* Botones para seleccionar la tabla */}
-        <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-5">
           {[...Array(10)].map((_, index) => (
             <button
               key={index + 1}
               onClick={() => seleccionarTabla(index + 1)}
-              className={`bg-blue-800 text-slate-100 text-xl rounded p-4 ${
+              className={`rounded bg-blue-800 p-4 text-xl text-slate-100 ${
                 numeroTabla === index + 1 ? "bg-green-600" : ""
               }`}
             >
@@ -34,7 +34,7 @@ function App() {
         </div>
 
         {/* Imagen de Will */}
-        <img src={will} alt="will" className="w-80 h-80 sm:mt-20 mx-auto" />
+        <img src={will} alt="will" className="mx-auto h-80 w-80 sm:mt-20" />
       </div>
 
       {/* Componente que muestra la tabla seleccionada */}

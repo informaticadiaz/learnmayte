@@ -10,18 +10,18 @@ function App() {
   };
 
   return (
-    <div className="p-10 sm:p-20 bg-dark h-screen text-t-btn-light">
-      <h1 className="text-5xl text-center mb-8">
+    <div className="h-screen bg-dark p-10 text-t-btn-light sm:p-20">
+      <h1 className="mb-8 text-center text-5xl">
         Selecciona una tabla para evaluar
       </h1>
 
       {/* Botones para seleccionar la tabla */}
-      <div className="grid grid-cols-5 gap-4 mb-10">
+      <div className="mb-10 grid grid-cols-5 gap-4">
         {[...Array(10)].map((_, index) => (
           <button
             key={index + 1}
             onClick={() => seleccionarTabla(index + 1)}
-            className={`bg-blue-800 text-slate-100 text-xl rounded p-4 ${
+            className={`rounded bg-blue-800 p-4 text-xl text-slate-100 ${
               numeroTabla === index + 1 ? "bg-green-600" : ""
             }`}
           >

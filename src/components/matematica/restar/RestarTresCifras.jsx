@@ -85,7 +85,7 @@ const RestarTresCifras = () => {
   return (
     <div className="p-20 sm:text-7xl">
       <h3>Resta de tres cifras</h3>
-      <div className="grid grid-cols-4 gap-4 m-4">
+      <div className="m-4 grid grid-cols-4 gap-4">
         <div></div>
         <div></div>
         {/* Botones para pedir decena o centena */}
@@ -94,7 +94,7 @@ const RestarTresCifras = () => {
             numeros.minuendo.unidad < numeros.sustraendo.unidad && (
               <button
                 onClick={handlePedirDecena}
-                className="bg-blue-500 text-white p-2 rounded m-2 text-xl"
+                className="m-2 rounded bg-blue-500 p-2 text-xl text-white"
               >
                 Pedir Decena
               </button>
@@ -105,27 +105,27 @@ const RestarTresCifras = () => {
             numeros.minuendo.decena < numeros.sustraendo.decena && (
               <button
                 onClick={handlePedirCentena}
-                className="bg-blue-500 text-white p-2 rounded m-2 text-xl"
+                className="m-2 rounded bg-blue-500 p-2 text-xl text-white"
               >
                 Pedir Centena
               </button>
             )}
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-4 m-4">
+      <div className="m-4 grid grid-cols-4 gap-4">
         <div></div>
         <div className="celda">{numeros.minuendo.centena}</div>
         <div className="celda">{numeros.minuendo.decena}</div>
         <div className="celda">{numeros.minuendo.unidad}</div>
         <div></div>
       </div>
-      <div className="grid grid-cols-4 gap-4 m-4">
+      <div className="m-4 grid grid-cols-4 gap-4">
         <div className="font">-</div>
         <div></div>
         <div></div>
         <div></div>
       </div>
-      <div className="grid grid-cols-4 gap-4 m-4">
+      <div className="m-4 grid grid-cols-4 gap-4">
         <div></div>
         <div className="celda">{numeros.sustraendo.centena}</div>
         <div className="celda">{numeros.sustraendo.decena}</div>
@@ -134,7 +134,7 @@ const RestarTresCifras = () => {
       </div>
       <div className="border"></div>
       <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-4 gap-4 m-4">
+        <div className="m-4 grid grid-cols-4 gap-4">
           <div></div>
           <input
             type="number"
@@ -160,17 +160,17 @@ const RestarTresCifras = () => {
       {acierto === true && <p>¡Correcto!</p>}
       {acierto === false && <p>Respuesta incorrecta. Intenta de nuevo.</p>}
 
-      <div className="grid grid-cols-2 gap-4 mt-8">
+      <div className="mt-8 grid grid-cols-2 gap-4">
         <Link
           to="/matematica"
-          className="w-full bg-purple-500 hover:bg-purple-700 text-white font-bold text-xl p-2 rounded"
+          className="w-full rounded bg-purple-500 p-2 text-xl font-bold text-white hover:bg-purple-700"
         >
           Volver
         </Link>
 
         <button
           onClick={() => setNumeros(generarNumerosValidos())}
-          className="w-full bg-green-500 text-white p-2 text-xl rounded"
+          className="w-full rounded bg-green-500 p-2 text-xl text-white"
         >
           Nueva Cuenta
         </button>

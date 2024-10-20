@@ -148,103 +148,103 @@ const EvaluacionMultiplicacion = () => {
   };
 
   return (
-    <div className="text-center p-20">
+    <div className="p-20 text-center">
       <h1 className="text-5xl">Evaluación de Multiplicación</h1>
-      <p className="text-4xl p-8">
+      <p className="p-8 text-4xl">
         {numero} x {multiplicador}
       </p>
-      <div className="p-20 m-auto">
-        <div className="text-4xl grid grid-cols-5 my-4 place-items-center">
-          <div className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+      <div className="m-auto p-20">
+        <div className="my-4 grid grid-cols-5 place-items-center text-4xl">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-purple-500 px-4 py-2 font-bold text-white hover:bg-purple-700">
             DM
           </div>
-          <div className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700">
             UM
           </div>
-          <div className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700">
             C
           </div>
-          <div className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700">
             D
           </div>
-          <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
             U
           </div>
         </div>
-        <div className="text-4xl grid grid-cols-5 place-items-center">
+        <div className="grid grid-cols-5 place-items-center text-4xl">
           <div></div>
           <input
-            className="w-20 h-20 rounded text-center text-white bg-red-500"
+            className="h-20 w-20 rounded bg-red-500 text-center text-white"
             type="number"
             value={acarreoCentena}
             onChange={(e) => setAcarreoCentena(e.target.value)}
           />
           <input
-            className="w-20 h-20 roundad text-center text-white bg-yellow-500"
+            className="roundad h-20 w-20 bg-yellow-500 text-center text-white"
             type="number"
             value={acarreoDecena}
             onChange={(e) => setAcarreoDecena(e.target.value)}
           />
           <input
-            className="w-20 h-20 rounded text-center text-white bg-green-500"
+            className="h-20 w-20 rounded bg-green-500 text-center text-white"
             type="number"
             value={acarreoUnidad}
             onChange={(e) => setAcarreoUnidad(e.target.value)}
           />
         </div>
         {/* Sección gráfica para mostrar las posiciones descompuestas del número */}
-        <div className="text-4xl grid grid-cols-5 my-4 place-items-center">
+        <div className="my-4 grid grid-cols-5 place-items-center text-4xl">
           <div></div>
-          <div className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700">
             {unidadesMil}
           </div>
-          <div className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700">
             {centenas}
           </div>
-          <div className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700">
             {decenas}
           </div>
-          <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
             {unidades}
           </div>
           <div></div>
-          <div className="bg-zinc-500 hover:bg-zinc-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded bg-zinc-500 px-4 py-2 font-bold text-white hover:bg-zinc-700">
             x
           </div>
           <div></div>
           <div></div>
-          <div className="my-4 bg-zinc-500 hover:bg-zinc-700 text-white font-bold py-2 px-4 rounded w-20 h-20 flex items-center justify-center">
+          <div className="my-4 flex h-20 w-20 items-center justify-center rounded bg-zinc-500 px-4 py-2 font-bold text-white hover:bg-zinc-700">
             {multiplicador}
           </div>
         </div>
-        <hr className="mb-2 border-yellow-200 border-2" />
-        <div className="text-4xl grid grid-cols-5 place-items-center">
+        <hr className="mb-2 border-2 border-yellow-200" />
+        <div className="grid grid-cols-5 place-items-center text-4xl">
           <input
-            className="w-20 h-20 rounded  text-center bg-purple-500 hover:bg-purple-700 text-white font-bold"
+            className="h-20 w-20 rounded bg-purple-500 text-center font-bold text-white hover:bg-purple-700"
             type="number"
             value={acarreoMil}
             onChange={(e) => setAcarreoMil(e.target.value)}
           />
           <input
-            className="w-20 h-20 rounded  text-center bg-red-500 hover:bg-red-700 text-white font-bold"
+            className="h-20 w-20 rounded bg-red-500 text-center font-bold text-white hover:bg-red-700"
             type="number"
             value={unidadMil}
             onChange={(e) => setUnidadMil(e.target.value)}
           />
           <input
-            className="w-20 h-20 rounded  text-center bg-yellow-500 hover:bg-yellow-700 text-white font-bold "
+            className="h-20 w-20 rounded bg-yellow-500 text-center font-bold text-white hover:bg-yellow-700"
             type="number"
             value={centena}
             onChange={(e) => setCentena(e.target.value)}
           />
           <input
-            className="w-20 h-20 rounded  text-center bg-green-500 hover:bg-green-700 text-white font-bold"
+            className="h-20 w-20 rounded bg-green-500 text-center font-bold text-white hover:bg-green-700"
             type="number"
             value={decena}
             onChange={(e) => setDecena(e.target.value)}
           />
           <input
-            className="w-20 h-20 rounded  text-center bg-blue-500 hover:bg-blue-700 text-white font-bold"
+            className="h-20 w-20 rounded bg-blue-500 text-center font-bold text-white hover:bg-blue-700"
             type="number"
             value={unidad}
             onChange={(e) => setUnidad(e.target.value)}
