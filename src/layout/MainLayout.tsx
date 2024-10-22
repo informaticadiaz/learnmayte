@@ -1,7 +1,7 @@
 import SideBarMenu from "./SideBarMenu/SideBarMenu";
 import { SideBarMenuItem, SideBarMenuCard } from "../types/types";
 import profileImage from "../assets/logo.png";
-import { FcCalculator, FcGraduationCap, FcAddressBook } from "react-icons/fc";
+import { FcCalculator, FcGraduationCap, FcAddressBook, FcLinux, FcCloseUpMode, FcPortraitMode, FcDownRight } from "react-icons/fc";
 import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
@@ -21,25 +21,25 @@ const MainLayout = () => {
     {
       id: "3",
       label: "SOCIALES",
-      icon: FcGraduationCap,
+      icon: FcPortraitMode,
       url: "/sociales",
     },
     {
       id: "4",
       label: "NATURALES",
-      icon: FcGraduationCap,
+      icon: FcCloseUpMode,
       url: "/naturales",
     },
     {
       id: "5",
       label: "TRIVIA",
-      icon: FcGraduationCap,
+      icon: FcLinux,
       url: "/trivia",
     },
     {
       id: "6",
       label: "CURSIVA",
-      icon: FcGraduationCap,
+      icon: FcDownRight,
       url: "/cursiva",
     },
     {

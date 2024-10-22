@@ -8,7 +8,7 @@ const TriviaQuestion = ({ questionData, onAnswer }) => {
 
   return (
     <div >
-      <h2 className="sm:text-7xl m-8">{questionData.question}</h2>
+      <h2 className="text-2xl sm:text-5xl m-8">{questionData.question}</h2>
       {questionData.options.map((option, index) => (
         <button key={index} onClick={() => handleOptionClick(option)}
         className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100">

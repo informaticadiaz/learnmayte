@@ -60,7 +60,7 @@ const App = () => {
   if (selectedTopic && !selectedSubtopic) {
     return (
       <div>
-        <h1 className="text-2xl sm:text-5xl m-8">Elige un tema para {triviaData[selectedTopic].name}</h1>
+        <h1 className="text-xl sm:text-4xl m-8">Elige un tema para {triviaData[selectedTopic].name}</h1>
         {Object.keys(triviaData[selectedTopic].subtopics).map((subtopic) => (
           <button
             key={subtopic}
@@ -77,16 +77,16 @@ const App = () => {
   // Pantalla de preguntas
   return (
     <div>
-      <h1>
-        Trivia sobre {selectedSubtopic} en {triviaData[selectedTopic].name}
+      <h1 className="text-2xl sm:text-5xl m-8">
+        Trivia sobre {selectedSubtopic}
       </h1>
       {currentQuestion <
-      triviaData[selectedTopic].subtopics[selectedSubtopic].length ? (
+        triviaData[selectedTopic].subtopics[selectedSubtopic].length ? (
         <>
           <TriviaQuestion
             questionData={
               triviaData[selectedTopic].subtopics[selectedSubtopic][
-                currentQuestion
+              currentQuestion
               ]
             }
             onAnswer={handleAnswer}
@@ -94,13 +94,17 @@ const App = () => {
           {feedback && <p>{feedback}</p>}
         </>
       ) : (
-        <p>
-          ¡Has completado la trivia! Tu puntaje es {score} de{" "}
-          {triviaData[selectedTopic].subtopics[selectedSubtopic].length}.
-          <button onClick={() => setSelectedTopic(null)}>
+        <>
+          <p className="my-2 m-auto  w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100">
+            ¡Has completado la trivia! Tu puntaje es {score} de{" "}
+            {triviaData[selectedTopic].subtopics[selectedSubtopic].length}.
+          </p>
+          <button
+            onClick={() => setSelectedTopic(null)}
+            className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100">
             Elige otro tema
           </button>
-        </p>
+        </>
       )}
     </div>
   );
