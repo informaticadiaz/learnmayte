@@ -20,6 +20,8 @@ import RestarTresCifras from "../components/matematica/restar/RestarTresCifras";
 import MultiplicarX4 from "../components/matematica/multiplicar/MultiplicarX4";
 import Multiplicar from "../components/matematica/multiplicar/Multiplicar";
 import Tablas from "../components/matematica/multiplicar/Tablas";
+// trivia
+import Trivia from "../components/trivia/Trivia";
 // error
 import ErrorPage from "../error-page";
 import Cursiva from "../components/Cursiva";
@@ -83,6 +85,11 @@ const routes = [
       {
         path: "multiplicar/cuatro-cifras",
         element: <MultiplicarX4 />,
+      },
+      // *-* trivia *-* //
+      {
+        path: "/trivia",
+        element: <Trivia />,
       },
       {
         path: "/lengua",

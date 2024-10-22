@@ -15,13 +15,13 @@ const MainLayout = () => {
     {
       id: "2",
       label: "LENGUA",
-      icon: FcCalculator,
+      icon: FcGraduationCap,
       url: "/lengua",
     },
     {
       id: "3",
       label: "SOCIALES",
-      icon: FcCalculator,
+      icon: FcGraduationCap,
       url: "/sociales",
     },
     {
@@ -32,12 +32,18 @@ const MainLayout = () => {
     },
     {
       id: "5",
+      label: "TRIVIA",
+      icon: FcGraduationCap,
+      url: "/trivia",
+    },
+    {
+      id: "6",
       label: "CURSIVA",
       icon: FcGraduationCap,
       url: "/cursiva",
     },
     {
-      id: "6",
+      id: "7",
       label: "DICCIONARIO",
       icon: FcAddressBook,
       url: "/diccionario",

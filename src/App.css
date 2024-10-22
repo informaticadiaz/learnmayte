@@ -26,4 +26,22 @@ body {
   background-color: #001c32;
   max-width: 1024px;
   margin: 0 auto;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.corazon {
+  animation: latido 1s ease infinite;
+}
+
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
