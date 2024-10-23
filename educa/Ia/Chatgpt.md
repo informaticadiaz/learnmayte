@@ -1,0 +1,1 @@
+¡Claro que sí! Puedo ayudarte a generar materiales de estudio para un tutor de matemáticas. Podemos trabajar juntos para crear ejercicios, explicaciones paso a paso, ejemplos prácticos y cualquier otro recurso que pueda ser útil para tu hija. ¿Hay algún tema específico de matemáticas en el que necesites ayuda o alguna área en la que quieras enfocarte más?

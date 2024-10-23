@@ -7,7 +7,7 @@ const TriviaQuestion = ({ questionData, onAnswer }) => {
   };
 
   return (
-    <div >
+    <div>
       <h2 className="text-2xl sm:text-5xl m-8">{questionData.question}</h2>
       {questionData.options.map((option, index) => (
         <button key={index} onClick={() => handleOptionClick(option)}

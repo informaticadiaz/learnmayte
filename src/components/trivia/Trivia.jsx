@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TriviaQuestion from "./TriviaQuestion";
 import triviaData from "./triviaData";
 
-const App = () => {
+const Trivia = () => {
   const [selectedTopic, setSelectedTopic] = useState(null); // Estado para el tema seleccionado
   const [selectedSubtopic, setSelectedSubtopic] = useState(null); // Estado para el subtema seleccionado
   const [score, setScore] = useState(0);
@@ -110,4 +110,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Trivia;
