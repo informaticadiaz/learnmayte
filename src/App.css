@@ -30,6 +30,33 @@ body {
   padding: 4rem 0;
 }
 
+.bg-green-500 {
+  background-color: #48bb78;
+}
+
+.bg-red-500 {
+  background-color: #f56565;
+}
+
+.option-button {
+  padding: 10px 20px;
+  margin: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
+
 .corazon {
   animation: latido 1s ease infinite;
 }

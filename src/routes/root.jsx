@@ -22,6 +22,7 @@ import Multiplicar from "../components/matematica/multiplicar/Multiplicar";
 import Tablas from "../components/matematica/multiplicar/Tablas";
 // trivia
 import Trivia from "../components/trivia/Trivia";
+import Pregunta from "../components/trivia/Pregunta";
 // error
 import ErrorPage from "../error-page";
 import Cursiva from "../components/Cursiva";
@@ -37,6 +38,12 @@ const routes = [
         path: "/",
         element: <App />,
       },
+      {
+        path: "/pregunta",
+        element: <Pregunta />,
+
+      },
+
       // *-* Matematica *-* //
       {
         path: "/matematica",

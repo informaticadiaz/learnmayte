@@ -8,22 +8,29 @@ const Trivia = () => {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [feedback, setFeedback] = useState(null);
+  const [showColors, setShowColors] = useState(false); // Nuevo estado para controlar cuándo mostrar los colores
 
-  const handleAnswer = (isCorrect) => {
-    // Muestra la respuesta correcta durante un segundo
+  const handleAnswer = (isCorrect, selectedAnswer) => {
+    setShowColors(true); // Muestra los colores
     setFeedback(
       isCorrect
         ? "¡Correcto!"
-        : `Incorrecto. La respuesta es ${triviaData[selectedTopic].subtopics[selectedSubtopic][currentQuestion].correctAnswer}`
+        : `Incorrecto. La respuesta correcta es ${
+            triviaData[selectedTopic].subtopics[selectedSubtopic][currentQuestion]
+              .correctAnswer
+          }`
     );
+
     if (isCorrect) {
       setScore(score + 1);
     }
 
+    // Muestra los colores por 2 segundos y luego pasa a la siguiente pregunta
     setTimeout(() => {
       setFeedback(null);
+      setShowColors(false); // Oculta los colores
       setCurrentQuestion(currentQuestion + 1);
-    }, 1000);
+    }, 2000);
   };
 
   // Maneja la selección de tema
@@ -47,7 +54,10 @@ const Trivia = () => {
       <div>
         <h1 className="m-8 text-2xl sm:text-5xl">Elige un tema para la trivia</h1>
         {Object.keys(triviaData).map((topic) => (
-          <button className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100" key={topic} onClick={() => handleTopicSelection(topic)}
+          <button
+            className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100"
+            key={topic}
+            onClick={() => handleTopicSelection(topic)}
           >
             {triviaData[topic].name}
           </button>
@@ -77,31 +87,28 @@ const Trivia = () => {
   // Pantalla de preguntas
   return (
     <div>
-      <h1 className="text-2xl sm:text-5xl m-8">
-        Trivia sobre {selectedSubtopic}
-      </h1>
       {currentQuestion <
-        triviaData[selectedTopic].subtopics[selectedSubtopic].length ? (
+      triviaData[selectedTopic].subtopics[selectedSubtopic].length ? (
         <>
           <TriviaQuestion
             questionData={
-              triviaData[selectedTopic].subtopics[selectedSubtopic][
-              currentQuestion
-              ]
+              triviaData[selectedTopic].subtopics[selectedSubtopic][currentQuestion]
             }
             onAnswer={handleAnswer}
+            showColors={showColors} // Pasamos el estado de colores
           />
           {feedback && <p>{feedback}</p>}
         </>
       ) : (
         <>
-          <p className="my-2 m-auto  w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100">
+          <p className="my-2 m-auto w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100">
             ¡Has completado la trivia! Tu puntaje es {score} de{" "}
             {triviaData[selectedTopic].subtopics[selectedSubtopic].length}.
           </p>
           <button
             onClick={() => setSelectedTopic(null)}
-            className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100">
+            className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100"
+          >
             Elige otro tema
           </button>
         </>
