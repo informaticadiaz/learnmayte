@@ -7,19 +7,10 @@ const Trivia = () => {
   const [selectedSubtopic, setSelectedSubtopic] = useState(null); // Estado para el subtema seleccionado
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [feedback, setFeedback] = useState(null);
   const [showColors, setShowColors] = useState(false); // Nuevo estado para controlar cuándo mostrar los colores
 
   const handleAnswer = (isCorrect, selectedAnswer) => {
     setShowColors(true); // Muestra los colores
-    setFeedback(
-      isCorrect
-        ? "¡Correcto!"
-        : `Incorrecto. La respuesta correcta es ${
-            triviaData[selectedTopic].subtopics[selectedSubtopic][currentQuestion]
-              .correctAnswer
-          }`
-    );
 
     if (isCorrect) {
       setScore(score + 1);
@@ -27,7 +18,6 @@ const Trivia = () => {
 
     // Muestra los colores por 2 segundos y luego pasa a la siguiente pregunta
     setTimeout(() => {
-      setFeedback(null);
       setShowColors(false); // Oculta los colores
       setCurrentQuestion(currentQuestion + 1);
     }, 2000);
@@ -97,7 +87,6 @@ const Trivia = () => {
             onAnswer={handleAnswer}
             showColors={showColors} // Pasamos el estado de colores
           />
-          {feedback && <p>{feedback}</p>}
         </>
       ) : (
         <>

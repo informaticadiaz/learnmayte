@@ -72,3 +72,21 @@ body {
     transform: scale(1);
   }
 }
+
+.rebote {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  margin: 100px auto;
+  animation: rebotar 2s infinite;
+}
+
+@keyframes rebotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-150px);
+  }
+}

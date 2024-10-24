@@ -1,23 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const TriviaQuestion = ({ questionData, onAnswer, showColors }) => {
+  const correctSound = useRef(null);
+  const errorSound = useRef(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
+  useEffect(() => {
+    correctSound.current = new Audio('/correct.mp3');
+    errorSound.current = new Audio('/error.mp3');
+  }, []); // 
   const handleClick = (option) => {
+    // Guarda la opción seleccionada
     setSelectedAnswer(option);
+    // Llama a onAnswer con un booleano indicando si es correcta
     onAnswer(option === questionData.correctAnswer, option);
   };
 
   const getButtonClass = (option) => {
+    // Comprueba si el componente debe mostrar colores (es decir, si se deben resaltar las respuestas)
     if (showColors) {
+      // Si esta opción es la respuesta correcta
       if (option === questionData.correctAnswer) {
-        return "correct"; // Respuesta correcta (verde)
+        // Verificar si la opción correcta también fue seleccionada por el usuario
+        if (option === selectedAnswer) {
+          // Reproduce el sonido correct solo si la opción seleccionada es correcta
+          if (correctSound.current) {
+            correctSound.current.play();
+          }
+        }
+        // Devuelve la clase "correct" (verde)
+        return "correct";
       }
+  
+      // Si la opción seleccionada NO es correcta
       if (option === selectedAnswer && option !== questionData.correctAnswer) {
-        return "incorrect"; // Respuesta seleccionada incorrecta (rojo)
+        // Reproduce el sonido error
+        if (errorSound.current) {
+          errorSound.current.play();
+        }
+        // Devuelve la clase "incorrect" (rojo)
+        return "incorrect";
       }
     }
-    return ""; // Sin color por defecto
+  
+    // Si no se cumple ninguna condición, no asigna ninguna clase
+    return "";
   };
 
   return (
