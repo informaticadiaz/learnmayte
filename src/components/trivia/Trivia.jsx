@@ -9,19 +9,22 @@ const Trivia = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showColors, setShowColors] = useState(false); // Nuevo estado para controlar cuándo mostrar los colores
 
-  const handleAnswer = (isCorrect, selectedAnswer) => {
-    setShowColors(true); // Muestra los colores
-
+  const handleAnswer = (isCorrect) => {
+    // Muestra los colores
+    setShowColors(true); 
+    // Si la respuesta es correcta, incrementa el puntaje
     if (isCorrect) {
       setScore(score + 1);
     }
-
-    // Muestra los colores por 2 segundos y luego pasa a la siguiente pregunta
+    // Determina el tiempo de espera dependiendo de la existencia de 'explanation'
+    const timeToWait = triviaData[selectedTopic].subtopics[selectedSubtopic][currentQuestion].explanation ? 8000 : 2000;
+    // Muestra los colores por el tiempo determinado y luego pasa a la siguiente pregunta
     setTimeout(() => {
       setShowColors(false); // Oculta los colores
       setCurrentQuestion(currentQuestion + 1);
-    }, 2000);
+    }, timeToWait);
   };
+  
 
   // Maneja la selección de tema
   const handleTopicSelection = (topic) => {

@@ -101,28 +101,31 @@ const triviaData = {
     subtopics: {
       "Presidentes": [
         {
-          question: "¿Quién fue el primer presidente de Argentina?",
-          options: [
+          "question": "¿Quién fue el primer presidente de Argentina?",
+          "options": [
             "Domingo Faustino Sarmiento",
             "Bartolomé Mitre",
             "Justo José de Urquiza",
-            "Cornelio Saavedra",
+            "Cornelio Saavedra"
           ],
-          correctAnswer: "Justo José de Urquiza",
+          "correctAnswer": "Justo José de Urquiza",
+          "explanation": "Justo José de Urquiza fue el primer presidente constitucional de Argentina, asumiendo el cargo en 1854.",
+          "category": "Historia Argentina"
         },
         {
-          question:
-            "¿Quién fue el presidente de Argentina durante la crisis del 2001?",
-          options: [
+          "question": "¿Quién fue el presidente de Argentina durante la crisis del 2001?",
+          "options": [
             "Carlos Menem",
             "Fernando de la Rúa",
             "Eduardo Duhalde",
-            "Néstor Kirchner",
+            "Néstor Kirchner"
           ],
-          correctAnswer: "Fernando de la Rúa",
-        },
+          "correctAnswer": "Fernando de la Rúa",
+          "explanation": "Fernando de la Rúa fue el presidente durante la crisis económica y política de 2001 en Argentina, renunciando en medio de la crisis.",
+          "category": "Historia Contemporánea"
+        }
         // más preguntas...
-      ],
+      ],    
       "Fechas Patrias": [
         {
           question: "¿Qué se conmemora en Argentina el 25 de mayo?",
