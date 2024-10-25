@@ -38,15 +38,6 @@ body {
   background-color: #f56565;
 }
 
-.option-button {
-  padding: 10px 20px;
-  margin: 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 .correct {
   background-color: green;
   color: white;

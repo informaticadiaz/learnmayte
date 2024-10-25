@@ -29,10 +29,10 @@ const TriviaQuestion = ({ questionData, onAnswer, showColors }) => {
   const getButtonClass = (option) => {
     if (showColors) {
       if (option === questionData.correctAnswer) {
-        return "correct"; // Clase correcta
+        return "correct corazon"; // Clase correcta
       }
       if (option === selectedAnswer && option !== questionData.correctAnswer) {
-        return "incorrect"; // Clase incorrecta
+        return "incorrect corazon"; // Clase incorrecta
       }
     }
     return ""; // Sin clase adicional
@@ -44,7 +44,7 @@ const TriviaQuestion = ({ questionData, onAnswer, showColors }) => {
       {questionData.options.map((option, index) => (
         <button
           key={index}
-          className={`option-button text-2xl block w-full bg-blue-700 ${getButtonClass(option)}`}
+          className={`text-2xl block w-full bg-blue-700 ${getButtonClass(option)}`}
           onClick={() => handleClick(option)}
           disabled={showColors} // Desactiva después de la selección
         >
