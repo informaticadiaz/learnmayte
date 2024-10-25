@@ -39,12 +39,12 @@ const TriviaQuestion = ({ questionData, onAnswer, showColors }) => {
   };
 
   return (
-    <div>
+    <div className="p-4">
       <h2 className="text-3xl sm:text-5xl mb-4">{questionData.question}</h2>
       {questionData.options.map((option, index) => (
         <button
           key={index}
-          className={`text-2xl block w-full bg-blue-700 my-4 ${getButtonClass(option)}`}
+          className={`text-2xl block w-full  bg-blue-700 my-4 p-2 rounded ${getButtonClass(option)}`}
           onClick={() => handleClick(option)}
           disabled={showColors} // Desactiva después de la selección
         >

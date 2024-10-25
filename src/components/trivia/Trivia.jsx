@@ -68,7 +68,7 @@ const Trivia = () => {
           <button
             key={subtopic}
             onClick={() => handleSubtopicSelection(subtopic)}
-            className="m-auto mt-2 w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100"
+            className="m-auto mt-2 border w-3/4 rounded bg-blue-800 p-2 text-2xl text-slate-100"
           >
             {subtopic}
           </button>
