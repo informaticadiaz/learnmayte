@@ -89,7 +89,7 @@ const MathStepByStep = () => {
   };
 
   return (
-    <div className="h-screen bg-dark p-10 sm:p-20">
+    <div className="h-screen p-10 sm:p-20">
       <h1 className="p-8 text-center text-4xl text-t-btn-light">
         Práctica de Matemática
       </h1>

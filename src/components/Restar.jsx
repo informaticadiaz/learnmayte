@@ -100,7 +100,7 @@ const Restar = () => {
   };
 
   return (
-    <div className="h-screen bg-slate-900 py-10 text-center">
+    <div className="h-screen py-10 text-center">
       {mensaje && <p className="py-8 text-2xl text-slate-200">{mensaje}</p>}
       <p id="numeros" className="text-6xl text-slate-200">
         {numeros}

@@ -84,7 +84,7 @@ export default function SumarDosCifras() {
   return (
     <div>
       {mostrarCalculadora ? (
-        <div className="h-screen bg-dark p-10 sm:p-20">
+        <div className="h-screen p-10 sm:p-20">
           {/* suma */}
 
           <div className="grid grid-cols-3 gap-2 text-center text-4xl sm:text-7xl">

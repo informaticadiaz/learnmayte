@@ -30,7 +30,7 @@ export default function AntesyDespues() {
   }, []);
 
   return (
-    <div className="mx-auto h-screen bg-slate-900 p-10">
+    <div className="mx-auto h-screen p-10">
       <h1 className="container mx-auto mb-4 text-center text-2xl font-semibold text-slate-300">
         Antes y Después
       </h1>

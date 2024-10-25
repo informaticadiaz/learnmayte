@@ -7,7 +7,7 @@ export default function Cursiva() {
     setTextoConvertido(inputText);
   };
   return (
-    <div className="h-screen bg-dark p-10">
+    <div className="h-screen p-10">
       <h1 className="font-cursiva text-8xl text-slate-400">Letra Cursiva</h1>
       <textarea
         rows="3"

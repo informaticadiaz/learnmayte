@@ -10,7 +10,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-dark p-10 text-t-btn-light sm:p-20">
+    <div className="h-screen p-10 text-t-btn-light sm:p-20">
       <h1 className="mb-8 text-center text-5xl">
         Selecciona una tabla para evaluar
       </h1>

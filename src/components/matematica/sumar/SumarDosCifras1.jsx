@@ -32,7 +32,7 @@ export default function SumarDosCifras() {
   };
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-gray-900 p-10 text-white">
+    <div className="flex h-screen flex-col items-center justify-center p-10 text-white">
       <p className="mb-4 text-7xl tracking-[0.5em]">{num1}</p>
       <p className="mb-4 text-7xl tracking-[0.5em]">{num2}</p>
       <form onSubmit={handleSubmit}>
